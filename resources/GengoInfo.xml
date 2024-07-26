@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 元号情報 -->
+<EraCalendar>
+  <!-- 元号基本情報 -->
+  <Base>
+    <Gengo id="001">
+      <EraJp>明治</EraJp>
+      <EraEn>M</EraEn>
+      <Start>
+        <Year>1868</Year>
+        <Month>09</Month>
+        <Day>08</Day>
+      </Start>
+      <End>
+        <Year>1912</Year>
+        <EraYear>45</EraYear>
+        <Month>07</Month>
+        <Day>29</Day>
+      </End>
+    </Gengo>
+    <Gengo id="002">
+      <EraJp>大正</EraJp>
+      <EraEn>T</EraEn>
+      <Start>
+        <Year>1912</Year>
+        <Month>07</Month>
+        <Day>30</Day>
+      </Start>
+      <End>
+        <Year>1926</Year>
+        <EraYear>15</EraYear>
+        <Month>12</Month>
+        <Day>24</Day>
+      </End>
+    </Gengo>
+    <Gengo id="003">
+      <EraJp>昭和</EraJp>
+      <EraEn>S</EraEn>
+      <Start>
+        <Year>1926</Year>
+        <Month>12</Month>
+        <Day>25</Day>
+      </Start>
+      <End>
+        <Year>1988</Year>
+        <EraYear>63</EraYear>
+        <Month>12</Month>
+        <Day>31</Day>
+      </End>
+    </Gengo>
+    <Gengo id="004">
+      <EraJp>平成</EraJp>
+      <EraEn>H</EraEn>
+      <Start>
+        <Year>1989</Year>
+        <Month>01</Month>
+        <Day>01</Day>
+      </Start>
+      <End>
+        <Year>2019</Year>
+        <EraYear>31</EraYear>
+        <Month>04</Month>
+        <Day>30</Day>
+      </End>
+    </Gengo>
+    <Gengo id="005">
+      <EraJp>令和</EraJp>
+      <EraEn>R</EraEn>
+      <Start>
+        <Year>2019</Year>
+        <Month>05</Month>
+        <Day>01</Day>
+      </Start>
+      <End>
+        <Year>9999</Year>
+        <EraYear>99</EraYear>
+        <Month>12</Month>
+        <Day>31</Day>
+      </End>
+    </Gengo>
+  </Base>
+  <!-- 境界情報 -->
+  <Border>
+    <Gengo id="001">
+      <Era>S</Era>
+      <Year>64</Year>
+      <Conv>H01</Conv>
+    </Gengo>
+    <Gengo id="002">
+      <Era>R</Era>
+      <Year>01</Year>
+      <Conv>H31</Conv>
+    </Gengo>
+  </Border>
+  <!-- 初期元号 -->
+  <Init>
+    <Era>R</Era>
+  </Init>
+</EraCalendar>

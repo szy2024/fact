@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controllerMappings viewName="cr005_06"	xmlns="http://www.fujitsu.com/crust/ControllerMapping/1.0">
+
+	<controller class="jp.go.jfc.partnernet.cr005.cr005_06.web.Cr005_06InitController"
+				validate="false">
+	</controller>
+	<controller class="jp.go.jfc.partnernet.cr005.cr005_06.web.Cr005_06OkController"
+				validate="false">
+            <forward id="successCr005_01Return" path="../cr005_01/Cr005_01Return.form"/>
+	</controller>
+
+</controllerMappings>

@@ -1,0 +1,1576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID"
+   version="3.0">
+	<display-name>PartnerNet_</display-name>
+	<filter>
+		<filter-name>characterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>characterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>bufferedServletInputStreamFilter</filter-name>
+		<filter-class>com.fujitsu.crust.web.filter.CFWBufferedServletInputStreamFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>bufferedServletInputStreamFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/ApplicationContext.xml;/WEB-INF/ApplicationContext*Common.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>defaultHtmlEscape</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<listener>
+		<listener-class>jp.go.jfc.partnernet.pnfw.web.control.mapping.PNControllerMappingListerner</listener-class>
+	</listener>
+	<context-param>
+		<param-name>mappingConfigLocation</param-name>
+		<param-value></param-value>
+	</context-param>
+<!-- [ADD] Ver 1.1.0 - START -->
+	<listener>
+		<listener-class>jp.go.jfc.partnernet.common.PNCommonCalendarInfoXml</listener-class>
+	</listener>
+<!-- [ADD] Ver 1.1.0 - END -->
+
+	<!-- 画面毎のサーブレット -->
+	<servlet>
+		<servlet-name>Common</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>-1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Common</servlet-name>
+		<url-pattern>/common/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Cm001_01 -->
+	<servlet>
+		<servlet-name>cm001_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cm001_01</servlet-name>
+		<url-pattern>/cm001/cm001_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Cm001_02 -->
+	<servlet>
+		<servlet-name>cm001_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cm001_02</servlet-name>
+		<url-pattern>/cm001/cm001_02/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Cm002_01 なし -->
+
+	<!-- Cm002_02 -->
+	<servlet>
+		<servlet-name>cm002_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cm002_02</servlet-name>
+		<url-pattern>/cm002/cm002_02/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Cm002_03 -->
+	<servlet>
+		<servlet-name>cm002_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cm002_03</servlet-name>
+		<url-pattern>/cm002/cm002_03/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Cm002_04 -->
+	<servlet>
+		<servlet-name>cm002_04</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cm002_04</servlet-name>
+		<url-pattern>/cm002/cm002_04/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Cm002_05 -->
+	<servlet>
+		<servlet-name>cm002_05</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cm002_05</servlet-name>
+		<url-pattern>/cm002/cm002_05/*</url-pattern>
+	</servlet-mapping>
+	<!--  Md000_01 -->
+	<servlet>
+		<servlet-name>md000_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+    	<load-on-startup>-1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md000_01</servlet-name>
+		<url-pattern>/md000/md000_01/*</url-pattern>
+	</servlet-mapping>
+
+    <!--  Md000_02 -->
+    <servlet>
+        <servlet-name>md000_02</servlet-name>
+        <servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+        <load-on-startup>-1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>md000_02</servlet-name>
+        <url-pattern>/md000/md000_02/*</url-pattern>
+    </servlet-mapping>
+
+	<!-- md001_01 -->
+	<servlet>
+		<servlet-name>md001_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md001_01</servlet-name>
+		<url-pattern>/md001/md001_01/*</url-pattern>
+	</servlet-mapping>
+	<!-- md001_02 -->
+	<servlet>
+		<servlet-name>md001_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md001_02</servlet-name>
+		<url-pattern>/md001/md001_02/*</url-pattern>
+	</servlet-mapping>
+	<!-- md001_03 -->
+	<servlet>
+		<servlet-name>md001_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md001_03</servlet-name>
+		<url-pattern>/md001/md001_03/*</url-pattern>
+    </servlet-mapping>
+	<!-- md002_01 -->
+	<servlet>
+		<servlet-name>md002_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md002_01</servlet-name>
+		<url-pattern>/md002/md002_01/*</url-pattern>
+	</servlet-mapping>
+	<!-- md002_02 -->
+	<servlet>
+		<servlet-name>md002_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md002_02</servlet-name>
+		<url-pattern>/md002/md002_02/*</url-pattern>
+	</servlet-mapping>
+	<!-- md002_03 -->
+	<servlet>
+		<servlet-name>md002_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md002_03</servlet-name>
+		<url-pattern>/md002/md002_03/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- md003_01 -->
+	<servlet>
+		<servlet-name>md003_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md003_01</servlet-name>
+		<url-pattern>/md003/md003_01/*</url-pattern>
+	</servlet-mapping>
+	<!-- md003_02 -->
+	<servlet>
+		<servlet-name>md003_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md003_02</servlet-name>
+		<url-pattern>/md003/md003_02/*</url-pattern>
+	</servlet-mapping>
+	<!-- md003_03 -->
+	<servlet>
+		<servlet-name>md003_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md003_03</servlet-name>
+		<url-pattern>/md003/md003_03/*</url-pattern>
+	</servlet-mapping>
+	<!-- md004_01 -->
+	<servlet>
+		<servlet-name>md004_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md004_01</servlet-name>
+		<url-pattern>/md004/md004_01/*</url-pattern>
+	</servlet-mapping>
+	<!-- md004_02 -->
+	<servlet>
+		<servlet-name>md004_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md004_02</servlet-name>
+		<url-pattern>/md004/md004_02/*</url-pattern>
+	</servlet-mapping>
+	<!-- md004_03 -->
+	<servlet>
+		<servlet-name>md004_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md004_03</servlet-name>
+		<url-pattern>/md004/md004_03/*</url-pattern>
+	</servlet-mapping>
+	<!-- md005_01 -->
+	<servlet>
+		<servlet-name>md005_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md005_01</servlet-name>
+		<url-pattern>/md005/md005_01/*</url-pattern>
+	</servlet-mapping>
+	<!-- md005_02 -->
+	<servlet>
+		<servlet-name>md005_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md005_02</servlet-name>
+		<url-pattern>/md005/md005_02/*</url-pattern>
+	</servlet-mapping>
+	<!-- md005_03 -->
+	<servlet>
+		<servlet-name>md005_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md005_03</servlet-name>
+		<url-pattern>/md005/md005_03/*</url-pattern>
+	</servlet-mapping>
+
+	<!--  Md006_01 -->
+	<servlet>
+		<servlet-name>md006_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md006_01</servlet-name>
+		<url-pattern>/md006/md006_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!--  Md006_02 -->
+	<servlet>
+		<servlet-name>md006_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md006_02</servlet-name>
+		<url-pattern>/md006/md006_02/*</url-pattern>
+	</servlet-mapping>
+
+	<!--  Md006_03 -->
+	<servlet>
+		<servlet-name>md006_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md006_03</servlet-name>
+		<url-pattern>/md006/md006_03/*</url-pattern>
+	</servlet-mapping>
+
+    <!--  Md008_01 -->
+    <servlet>
+        <servlet-name>md008_01</servlet-name>
+        <servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+        <load-on-startup>-1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>md008_01</servlet-name>
+        <url-pattern>/md008/md008_01/*</url-pattern>
+    </servlet-mapping>
+    <!-- md008_02 -->
+    <servlet>
+        <servlet-name>md008_02</servlet-name>
+        <servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>md008_02</servlet-name>
+        <url-pattern>/md008/md008_02/*</url-pattern>
+    </servlet-mapping>
+    <!-- md008_03 -->
+    <servlet>
+        <servlet-name>md008_03</servlet-name>
+        <servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>md008_03</servlet-name>
+        <url-pattern>/md008/md008_03/*</url-pattern>
+    </servlet-mapping>
+
+	<!--  Md009_01 -->
+	<servlet>
+		<servlet-name>md009_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md009_01</servlet-name>
+		<url-pattern>/md009/md009_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!--  Md009_02 -->
+	<servlet>
+		<servlet-name>md009_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md009_02</servlet-name>
+		<url-pattern>/md009/md009_02/*</url-pattern>
+	</servlet-mapping>
+
+	<!--  Md009_03 -->
+	<servlet>
+		<servlet-name>md009_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>md009_03</servlet-name>
+		<url-pattern>/md009/md009_03/*</url-pattern>
+	</servlet-mapping>
+
+		<!--  md010_01 -->
+		<servlet>
+				<servlet-name>md010_01</servlet-name>
+				<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+				<load-on-startup>0</load-on-startup>
+		</servlet>
+		<servlet-mapping>
+				<servlet-name>md010_01</servlet-name>
+				<url-pattern>/md010/md010_01/*</url-pattern>
+		</servlet-mapping>
+
+		<!--  md011_01 -->
+		<servlet>
+				<servlet-name>md011_01</servlet-name>
+				<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+				<load-on-startup>0</load-on-startup>
+		</servlet>
+		<servlet-mapping>
+				<servlet-name>md011_01</servlet-name>
+				<url-pattern>/md011/md011_01/*</url-pattern>
+		</servlet-mapping>
+
+		<!--  md012_01 -->
+		<servlet>
+				<servlet-name>md012_01</servlet-name>
+				<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+				<load-on-startup>0</load-on-startup>
+		</servlet>
+		<servlet-mapping>
+				<servlet-name>md012_01</servlet-name>
+				<url-pattern>/md012/md012_01/*</url-pattern>
+		</servlet-mapping>
+
+		<!--  md013_01 -->
+		<servlet>
+				<servlet-name>md013_01</servlet-name>
+				<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+				<load-on-startup>0</load-on-startup>
+		</servlet>
+		<servlet-mapping>
+				<servlet-name>md013_01</servlet-name>
+				<url-pattern>/md013/md013_01/*</url-pattern>
+		</servlet-mapping>
+
+	<!-- se001_01 -->
+	<servlet>
+		<servlet-name>se001_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se001_01</servlet-name>
+		<url-pattern>/se001/se001_01/*</url-pattern>
+	</servlet-mapping>
+	<!-- se001_02 -->
+	<servlet>
+		<servlet-name>se001_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se001_02</servlet-name>
+		<url-pattern>/se001/se001_02/*</url-pattern>
+	</servlet-mapping>
+	<!-- se001_03 -->
+	<servlet>
+		<servlet-name>se001_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se001_03</servlet-name>
+		<url-pattern>/se001/se001_03/*</url-pattern>
+	</servlet-mapping>
+	<!-- se002_01 -->
+	<servlet>
+		<servlet-name>se002_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se002_01</servlet-name>
+		<url-pattern>/se002/se002_01/*</url-pattern>
+	</servlet-mapping>
+	<!-- se003_01 -->
+	<servlet>
+		<servlet-name>se003_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se003_01</servlet-name>
+		<url-pattern>/se003/se003_01/*</url-pattern>
+	</servlet-mapping>
+	<!-- se003_02 -->
+	<servlet>
+		<servlet-name>se003_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se003_02</servlet-name>
+		<url-pattern>/se003/se003_02/*</url-pattern>
+	</servlet-mapping>
+	<!-- se004_01 -->
+	<servlet>
+		<servlet-name>se004_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se004_01</servlet-name>
+		<url-pattern>/se004/se004_01/*</url-pattern>
+	</servlet-mapping>
+	<!-- se004_02 -->
+	<servlet>
+		<servlet-name>se004_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+    	<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se004_02</servlet-name>
+		<url-pattern>/se004/se004_02/*</url-pattern>
+	</servlet-mapping>
+	<!-- se005_01 -->
+	<servlet>
+		<servlet-name>se005_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se005_01</servlet-name>
+		<url-pattern>/se005/se005_01/*</url-pattern>
+	</servlet-mapping>
+	<!-- se006_01 -->
+	<servlet>
+		<servlet-name>se006_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se006_01</servlet-name>
+		<url-pattern>/se006/se006_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- se006_02 -->
+	<servlet>
+		<servlet-name>se006_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+    	<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se006_02</servlet-name>
+		<url-pattern>/se006/se006_02/*</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- se006_04-->
+	<servlet>
+		<servlet-name>se006_04</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se006_04</servlet-name>
+		<url-pattern>/se006/se006_04/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- se006_05 -->
+	<servlet>
+		<servlet-name>se006_05</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se006_05</servlet-name>
+		<url-pattern>/se006/se006_05/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- se006_06 -->
+	<servlet>
+		<servlet-name>se006_06</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se006_06</servlet-name>
+		<url-pattern>/se006/se006_06/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- se006_07 -->
+	<servlet>
+		<servlet-name>se006_07</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se006_07</servlet-name>
+		<url-pattern>/se006/se006_07/*</url-pattern>
+	</servlet-mapping>
+	<!-- se006_08 -->
+	<servlet>
+		<servlet-name>se006_08</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se006_08</servlet-name>
+		<url-pattern>/se006/se006_08/*</url-pattern>
+	</servlet-mapping>
+	<!-- se006_09 -->
+	<servlet>
+		<servlet-name>se006_09</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se006_09</servlet-name>
+		<url-pattern>/se006/se006_09/*</url-pattern>
+	</servlet-mapping>
+	<!-- se006_10 -->
+		<servlet>
+		<servlet-name>se006_10</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se006_10</servlet-name>
+		<url-pattern>/se006/se006_10/*</url-pattern>
+	</servlet-mapping>
+	<!-- se006_12 -->
+		<servlet>
+		<servlet-name>se006_12</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se006_12</servlet-name>
+		<url-pattern>/se006/se006_12/*</url-pattern>
+	</servlet-mapping>
+	<!-- se006_13 -->
+	<servlet>
+		<servlet-name>se006_13</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se006_13</servlet-name>
+		<url-pattern>/se006/se006_13/*</url-pattern>
+	</servlet-mapping>
+		<!-- se006_14 -->
+		<servlet>
+				<servlet-name>se006_14</servlet-name>
+				<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+				<load-on-startup>0</load-on-startup>
+		</servlet>
+		<servlet-mapping>
+				<servlet-name>se006_14</servlet-name>
+				<url-pattern>/se006/se006_14/*</url-pattern>
+		</servlet-mapping>
+		<!-- se006_15 -->
+		<servlet>
+				<servlet-name>se006_15</servlet-name>
+				<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+				<load-on-startup>0</load-on-startup>
+		</servlet>
+		<servlet-mapping>
+				<servlet-name>se006_15</servlet-name>
+				<url-pattern>/se006/se006_15/*</url-pattern>
+		</servlet-mapping>
+		<!-- se006_16 -->
+		<servlet>
+				<servlet-name>se006_16</servlet-name>
+				<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+				<load-on-startup>0</load-on-startup>
+		</servlet>
+		<servlet-mapping>
+				<servlet-name>se006_16</servlet-name>
+				<url-pattern>/se006/se006_16/*</url-pattern>
+		</servlet-mapping>
+		<!-- se006_17 -->
+		<servlet>
+				<servlet-name>se006_17</servlet-name>
+				<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+				<load-on-startup>0</load-on-startup>
+		</servlet>
+		<servlet-mapping>
+				<servlet-name>se006_17</servlet-name>
+				<url-pattern>/se006/se006_17/*</url-pattern>
+		</servlet-mapping>
+	<!-- se007_01 -->
+	<servlet>
+		<servlet-name>se007_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se007_01</servlet-name>
+		<url-pattern>/se007/se007_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Se007_02 -->
+	<servlet>
+		<servlet-name>se007_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se007_02</servlet-name>
+		<url-pattern>/se007/se007_02/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Se008_01 -->
+	<servlet>
+		<servlet-name>se008_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se008_01</servlet-name>
+		<url-pattern>/se008/se008_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Se008_02 -->
+	<servlet>
+		<servlet-name>se008_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>-1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se008_02</servlet-name>
+		<url-pattern>/se008/se008_02/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Se009_01 -->
+	<servlet>
+		<servlet-name>se009_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se009_01</servlet-name>
+		<url-pattern>/se009/se009_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Se009_02 -->
+	<servlet>
+		<servlet-name>se009_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se009_02</servlet-name>
+		<url-pattern>/se009/se009_02/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Se010_01 -->
+	<servlet>
+		<servlet-name>se010_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se010_01</servlet-name>
+		<url-pattern>/se010/se010_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Se010_02 -->
+	<servlet>
+		<servlet-name>se010_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se010_02</servlet-name>
+		<url-pattern>/se010/se010_02/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Se011_01 -->
+	<servlet>
+		<servlet-name>se011_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se011_01</servlet-name>
+		<url-pattern>/se011/se011_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Se012_01 -->
+	<servlet>
+		<servlet-name>se012_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se012_01</servlet-name>
+		<url-pattern>/se012/se012_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Se012_02 -->
+	<servlet>
+		<servlet-name>se012_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se012_02</servlet-name>
+		<url-pattern>/se012/se012_02/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Se013_01 -->
+	<servlet>
+		<servlet-name>se013_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se013_01</servlet-name>
+		<url-pattern>/se013/se013_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Se014_01 -->
+	<servlet>
+		<servlet-name>se014_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se014_01</servlet-name>
+		<url-pattern>/se014/se014_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Se015_01 -->
+	<servlet>
+		<servlet-name>se015_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se015_01</servlet-name>
+		<url-pattern>/se015/se015_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Se016_01 -->
+	<servlet>
+		<servlet-name>se016_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>se016_01</servlet-name>
+		<url-pattern>/se016/se016_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- cr001_01 -->
+	<servlet>
+		<servlet-name>cr001_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr001_01</servlet-name>
+		<url-pattern>/cr001/cr001_01/*</url-pattern>
+	</servlet-mapping>
+	<!-- cr001_02 -->
+	<servlet>
+		<servlet-name>cr001_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr001_02</servlet-name>
+		<url-pattern>/cr001/cr001_02/*</url-pattern>
+	</servlet-mapping>
+	<!-- cr001_03 -->
+	<servlet>
+		<servlet-name>cr001_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr001_03</servlet-name>
+		<url-pattern>/cr001/cr001_03/*</url-pattern>
+    </servlet-mapping>
+    	<!-- cr002_01 -->
+	<servlet>
+		<servlet-name>cr002_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr002_01</servlet-name>
+		<url-pattern>/cr002/cr002_01/*</url-pattern>
+	</servlet-mapping>
+	<!-- cr002_02 -->
+	<servlet>
+		<servlet-name>cr002_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr002_02</servlet-name>
+		<url-pattern>/cr002/cr002_02/*</url-pattern>
+	</servlet-mapping>
+	<!-- cr002_03 -->
+	<servlet>
+		<servlet-name>cr002_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr002_03</servlet-name>
+		<url-pattern>/cr002/cr002_03/*</url-pattern>
+	</servlet-mapping>
+    <!-- cr003_01 -->
+    <servlet>
+        <servlet-name>cr003_01</servlet-name>
+        <servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cr003_01</servlet-name>
+        <url-pattern>/cr003/cr003_01/*</url-pattern>
+    </servlet-mapping>
+        <!-- cr003_02 -->
+    <servlet>
+        <servlet-name>cr003_02</servlet-name>
+        <servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cr003_02</servlet-name>
+        <url-pattern>/cr003/cr003_02/*</url-pattern>
+    </servlet-mapping>
+        <!-- cr003_03 -->
+    <servlet>
+        <servlet-name>cr003_03</servlet-name>
+        <servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cr003_03</servlet-name>
+        <url-pattern>/cr003/cr003_03/*</url-pattern>
+    </servlet-mapping>
+        <!-- cr003_04 -->
+    <servlet>
+        <servlet-name>cr003_04</servlet-name>
+        <servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cr003_04</servlet-name>
+        <url-pattern>/cr003/cr003_04/*</url-pattern>
+    </servlet-mapping>
+    <!-- cr004_01 -->
+    <servlet>
+        <servlet-name>cr004_01</servlet-name>
+        <servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cr004_01</servlet-name>
+        <url-pattern>/cr004/cr004_01/*</url-pattern>
+    </servlet-mapping>
+    	<!-- cr004_02 -->
+	<servlet>
+		<servlet-name>cr004_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr004_02</servlet-name>
+		<url-pattern>/cr004/cr004_02/*</url-pattern>
+	</servlet-mapping>
+	<!-- cr004_03 -->
+	<servlet>
+		<servlet-name>cr004_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr004_03</servlet-name>
+		<url-pattern>/cr004/cr004_03/*</url-pattern>
+	</servlet-mapping>
+	<!-- cr004_04 -->
+	<servlet>
+		<servlet-name>cr004_04</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr004_04</servlet-name>
+		<url-pattern>/cr004/cr004_04/*</url-pattern>
+	</servlet-mapping>
+	<!-- cr004_05 -->
+	<servlet>
+		<servlet-name>cr004_05</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr004_05</servlet-name>
+		<url-pattern>/cr004/cr004_05/*</url-pattern>
+	</servlet-mapping>
+	<!-- cr004_06 stub -->
+	<servlet>
+		<servlet-name>cr004_06</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr004_06</servlet-name>
+		<url-pattern>/cr004/cr004_06/*</url-pattern>
+	</servlet-mapping>
+	<!-- cr005_01 -->
+	<servlet>
+		<servlet-name>cr005_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr005_01</servlet-name>
+		<url-pattern>/cr005/cr005_01/*</url-pattern>
+	</servlet-mapping>
+	<!-- cr005_02 -->
+	<servlet>
+		<servlet-name>cr005_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr005_02</servlet-name>
+		<url-pattern>/cr005/cr005_02/*</url-pattern>
+	</servlet-mapping>
+	<!-- cr005_03 -->
+	<servlet>
+		<servlet-name>cr005_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr005_03</servlet-name>
+		<url-pattern>/cr005/cr005_03/*</url-pattern>
+	</servlet-mapping>
+	<!-- cr005_04 -->
+	<servlet>
+		<servlet-name>cr005_04</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr005_04</servlet-name>
+		<url-pattern>/cr005/cr005_04/*</url-pattern>
+	</servlet-mapping>
+	<!-- cr005_05 -->
+	<servlet>
+		<servlet-name>cr005_05</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr005_05</servlet-name>
+		<url-pattern>/cr005/cr005_05/*</url-pattern>
+	</servlet-mapping>
+	<!-- cr005_06 -->
+	<servlet>
+		<servlet-name>cr005_06</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr005_06</servlet-name>
+		<url-pattern>/cr005/cr005_06/*</url-pattern>
+	</servlet-mapping>
+	<!-- cr006_01 -->
+	<servlet>
+		<servlet-name>cr006_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr006_01</servlet-name>
+		<url-pattern>/cr006/cr006_01/*</url-pattern>
+	</servlet-mapping>
+	<!-- cr006_02 -->
+	<servlet>
+		<servlet-name>cr006_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr006_02</servlet-name>
+		<url-pattern>/cr006/cr006_02/*</url-pattern>
+	</servlet-mapping>
+	<!-- cr006_03 -->
+	<servlet>
+		<servlet-name>cr006_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr006_03</servlet-name>
+		<url-pattern>/cr006/cr006_03/*</url-pattern>
+	</servlet-mapping>
+	<!-- cr006_04 -->
+	<servlet>
+		<servlet-name>cr006_04</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr006_04</servlet-name>
+		<url-pattern>/cr006/cr006_04/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- cr008_01 -->
+	<servlet>
+		<servlet-name>cr008_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr008_01</servlet-name>
+		<url-pattern>/cr008/cr008_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- cr008_02 -->
+	<servlet>
+		<servlet-name>cr008_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr008_02</servlet-name>
+		<url-pattern>/cr008/cr008_02/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- cr008_03 -->
+	<servlet>
+		<servlet-name>cr008_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr008_03</servlet-name>
+		<url-pattern>/cr008/cr008_03/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- cr008_04 -->
+	<servlet>
+		<servlet-name>cr008_04</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr008_04</servlet-name>
+		<url-pattern>/cr008/cr008_04/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- cr008_05 -->
+	<servlet>
+		<servlet-name>cr008_05</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr008_05</servlet-name>
+		<url-pattern>/cr008/cr008_05/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- cr008_06 -->
+	<servlet>
+		<servlet-name>cr008_06</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr008_06</servlet-name>
+		<url-pattern>/cr008/cr008_06/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Cr009_01 -->
+	<servlet>
+		<servlet-name>cr009_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr009_01</servlet-name>
+		<url-pattern>/cr009/cr009_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Cr009_02 -->
+	<servlet>
+		<servlet-name>cr009_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr009_02</servlet-name>
+		<url-pattern>/cr009/cr009_02/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Cr009_03 -->
+	<servlet>
+		<servlet-name>cr009_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cr009_03</servlet-name>
+		<url-pattern>/cr009/cr009_03/*</url-pattern>
+	</servlet-mapping>
+
+		<!-- Cr010_01 -->
+		<servlet>
+				<servlet-name>cr010_01</servlet-name>
+				<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+				<load-on-startup>0</load-on-startup>
+		</servlet>
+		<servlet-mapping>
+				<servlet-name>cr010_01</servlet-name>
+				<url-pattern>/cr010/cr010_01/*</url-pattern>
+		</servlet-mapping>
+
+		<!-- Cr011_01 -->
+		<servlet>
+				<servlet-name>cr011_01</servlet-name>
+				<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+				<load-on-startup>0</load-on-startup>
+		</servlet>
+		<servlet-mapping>
+				<servlet-name>cr011_01</servlet-name>
+				<url-pattern>/cr011/cr011_01/*</url-pattern>
+		</servlet-mapping>
+
+		<!-- Cr012_01 -->
+		<servlet>
+				<servlet-name>cr012_01</servlet-name>
+				<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+				<load-on-startup>0</load-on-startup>
+		</servlet>
+		<servlet-mapping>
+				<servlet-name>cr012_01</servlet-name>
+				<url-pattern>/cr012/cr012_01/*</url-pattern>
+		</servlet-mapping>
+
+		<!-- Cr013_01 -->
+		<servlet>
+				<servlet-name>cr013_01</servlet-name>
+				<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+				<load-on-startup>0</load-on-startup>
+		</servlet>
+		<servlet-mapping>
+				<servlet-name>cr013_01</servlet-name>
+				<url-pattern>/cr013/cr013_01/*</url-pattern>
+		</servlet-mapping>
+
+	<!-- Um001_01 -->
+	<servlet>
+		<servlet-name>um001_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>um001_01</servlet-name>
+		<url-pattern>/um001/um001_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Um001_02 -->
+	<servlet>
+		<servlet-name>um001_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>um001_02</servlet-name>
+		<url-pattern>/um001/um001_02/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Um001_03 -->
+	<servlet>
+		<servlet-name>um001_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>um001_03</servlet-name>
+		<url-pattern>/um001/um001_03/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Ut001_01 -->
+	<servlet>
+		<servlet-name>ut001_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+    	<load-on-startup>-1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ut001_01</servlet-name>
+		<url-pattern>/ut001/ut001_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Ut001_02 -->
+	<servlet>
+		<servlet-name>Ut001_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Ut001_02</servlet-name>
+		<url-pattern>/ut001/ut001_02/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Ut001_03 -->
+	<servlet>
+		<servlet-name>Ut001_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Ut001_03</servlet-name>
+		<url-pattern>/ut001/ut001_03/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Ut001_04 -->
+	<servlet>
+		<servlet-name>Ut001_04</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Ut001_04</servlet-name>
+		<url-pattern>/ut001/ut001_04/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Ut001_05 -->
+		<servlet>
+		<servlet-name>Ut001_05</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Ut001_05</servlet-name>
+		<url-pattern>/ut001/ut001_05/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Ut002_01 -->
+	<servlet>
+		<servlet-name>ut002_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ut002_01</servlet-name>
+		<url-pattern>/ut002/ut002_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Ut003_01 -->
+	<servlet>
+		<servlet-name>ut003_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ut003_01</servlet-name>
+		<url-pattern>/ut003/ut003_01/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Ut003_02 -->
+	<servlet>
+		<servlet-name>ut003_02</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ut003_02</servlet-name>
+		<url-pattern>/ut003/ut003_02/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Ut003_03 -->
+	<servlet>
+		<servlet-name>ut003_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ut003_03</servlet-name>
+		<url-pattern>/ut003/ut003_03/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Ut003_04 -->
+	<servlet>
+		<servlet-name>ut003_04</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ut003_04</servlet-name>
+		<url-pattern>/ut003/ut003_04/*</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Ut003_05 -->
+	<servlet>
+		<servlet-name>ut003_05</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ut003_05</servlet-name>
+		<url-pattern>/ut003/ut003_05/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Ut004_01 -->
+	<servlet>
+		<servlet-name>ut004_01</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ut004_01</servlet-name>
+		<url-pattern>/ut004/ut004_01/*</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- エラー -->
+	<!-- 400番台のエラーページはダミーです。各エラーはIE標準の画面が表示されます。 -->
+    <error-page>
+		<error-code>400</error-code>
+		<location>/jsp/PN400Error.jsp</location>
+	</error-page>
+    <error-page>
+		<error-code>401</error-code>
+		<location>/jsp/PN401Error.jsp</location>
+	</error-page>
+    <error-page>
+		<error-code>403</error-code>
+		<location>/jsp/PN403Error.jsp</location>
+	</error-page>
+    <error-page>
+		<error-code>404</error-code>
+		<location>/jsp/PN404Error.jsp</location>
+	</error-page>
+    <error-page>
+		<error-code>405</error-code>
+		<location>/jsp/PN405Error.jsp</location>
+	</error-page>
+    <error-page>
+		<error-code>406</error-code>
+		<location>/jsp/PN406Error.jsp</location>
+	</error-page>
+    <error-page>
+		<error-code>407</error-code>
+		<location>/jsp/PN407Error.jsp</location>
+	</error-page>
+    <error-page>
+		<error-code>408</error-code>
+		<location>/jsp/PN408Error.jsp</location>
+	</error-page>
+    <error-page>
+		<error-code>409</error-code>
+		<location>/jsp/PN409Error.jsp</location>
+	</error-page>
+    <error-page>
+		<error-code>410</error-code>
+		<location>/jsp/PN410Error.jsp</location>
+	</error-page>
+    <error-page>
+		<error-code>411</error-code>
+		<location>/jsp/PN411Error.jsp</location>
+	</error-page>
+    <error-page>
+		<error-code>412</error-code>
+		<location>/jsp/PN412Error.jsp</location>
+	</error-page>
+    <error-page>
+		<error-code>413</error-code>
+		<location>/jsp/PN413Error.jsp</location>
+	</error-page>
+    <error-page>
+		<error-code>414</error-code>
+		<location>/jsp/PN414Error.jsp</location>
+	</error-page>
+    <error-page>
+		<error-code>415</error-code>
+		<location>/jsp/PN415Error.jsp</location>
+	</error-page>
+    <error-page>
+		<error-code>416</error-code>
+		<location>/jsp/PN416Error.jsp</location>
+	</error-page>
+    <error-page>
+		<error-code>417</error-code>
+		<location>/jsp/PN417Error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/jsp/SystemError.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>501</error-code>
+		<location>/jsp/SystemError.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>502</error-code>
+		<location>/jsp/SystemError.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>503</error-code>
+		<location>/jsp/SystemError.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>504</error-code>
+		<location>/jsp/SystemError.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>505</error-code>
+		<location>/jsp/SystemError.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>com.fujitsu.crust.exception.CFWSystemException</exception-type>
+		<location>/jsp/SystemError.jsp</location>
+	</error-page>
+    <error-page>
+        <exception-type>jp.go.jfc.partnernet.pnfw.exception.PNSystemCloseException</exception-type>
+        <location>/jsp/TimeoutError.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>jp.go.jfc.partnernet.pnfw.exception.PNMultipleLogonException</exception-type>
+        <location>/jsp/SystemError.jsp</location>
+    </error-page>
+<!--
+	<error-page>
+		<exception-type>com.fujitsu.crust.exception.CFWSessionTimeoutException</exception-type>
+		<location>/jsp/SystemError.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>jp.go.jfc.partnernet.pnfw.exception.PNIllegalOperationException</exception-type>
+		<location>/jsp/SystemError.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>jp.go.jfc.partnernet.pnfw.exception.PNSameOutputFileException</exception-type>
+		<location>/jsp/SystemError.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>jp.go.jfc.partnernet.pnfw.exception.PNTransactionException</exception-type>
+		<location>/jsp/SystemError.jsp</location>
+	</error-page>
+ -->
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+        <cookie-config>
+            <http-only>true</http-only>
+        </cookie-config>
+        <tracking-mode>COOKIE</tracking-mode>
+    </session-config>
+
+	<!-- パートナーネット用カスタムタグ -->
+	<jsp-config>
+		<taglib>
+			<taglib-uri>http://partnernet.jfc.go.jp/tags/pn</taglib-uri>
+			<taglib-location>/WEB-INF/tlds/pn.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+
+</web-app>

@@ -1,0 +1,493 @@
+@charset "utf-8";
+
+html {
+overflow-y:auto;
+font-size: 62.5%;
+}
+
+/*  ■ body
+--------------------------------------------------------- */
+body {
+text-align:left;
+line-height:1.6;
+font-family:"ＭＳ Ｐゴシック","MS P Gothic","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3",Osaka,sans-serif;
+font-size: 10pt;
+background:#ffffff;
+}
+
+input {
+font-family:"ＭＳ Ｐゴシック","MS P Gothic","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3",Osaka,sans-serif;
+font-size: 10pt;
+}
+
+select {
+font-family:"ＭＳ Ｐゴシック","MS P Gothic","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3",Osaka,sans-serif;
+font-size: 10pt;
+}
+
+textarea {
+font-family:"ＭＳ Ｐゴシック","MS P Gothic","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3",Osaka,sans-serif;
+font-size: 10pt;
+}
+
+/* ------- メインエリア横メニュー背景の設定 ------ */
+#stage {
+}
+
+/* システムエリア（中央イメージ） */
+#system {
+float: left;
+width: 100%;
+background-image: url(../image/h1_m.gif);
+background-repeat: repeat-x;
+background-position: 0px -27px;
+height: 32px;
+}
+
+/* h1 */
+#system h1 {
+clear: both;
+position: relative;
+top: 1px;
+padding-left: 15px;
+font: normal 16pt "ＭＳ Ｐゴシック", sans-serif;
+color: #FFFFFF;
+font-weight: bold;
+}
+
+h1{
+display:inline;
+float:left;
+font-size:1.1em;
+color:#FFF;
+}
+
+
+/*  ------ ログインエリア ------  */
+#system .contents {
+/**** （1行の場合）width: 100%; */
+/**** （2行の場合）width: 500px;ぐらい */
+/**** （3行の場合）width: 350px;ぐらい（3行の場合） */
+width: 100%;
+/* float: right; */
+padding: 5px 5px 5px 0px;
+}
+
+#system .contents div {
+text-align: right;
+padding: 3px;
+margin: 3px 1px;
+font: normal 10pt "ＭＳ Ｐゴシック", sans-serif;
+/**** （1行の場合）display: inline; */
+/**** （2行の場合）消去*/
+/**** （3行の場合）消去 */
+display: inline;
+}
+
+#system .contents form {
+float: right;
+}
+
+#system .contents form_2 {
+float: right;
+}
+
+/* ログインエリア（日付関連） */
+#system .contents .date {
+/* vertical-align: text-top; */
+/**** （1行の場合）消去 */
+/**** （2行の場合）横に並べたいエリアに記述　display: inline;*/
+/**** （3行の場合）消去 */
+/*display: inline;*/
+}
+
+/* アイコン */
+#system .contents .date .icon {
+
+}
+
+/* ラベル文言 */
+#system .contents .date .label {
+
+}
+
+/* 表示文言 */
+#system .contents .date .item {
+
+}
+
+/* ログインエリア（ユーザ情報関連） */
+#system .contents .user {
+/* vertical-align: text-top; */
+/**** （1行の場合）消去 */
+/**** （2行の場合）横に並べたいエリアに記述　display: inline;*/
+/**** （3行の場合）消去 */
+/*display: inline;*/
+}
+
+/* アイコン */
+#system .contents .user .icon {
+
+}
+
+/* ラベル文言 */
+#system .contents .user .label {
+font: normal 10pt "ＭＳ Ｐゴシック", sans-serif;
+}
+
+/* 表示文言 */
+#system .contents .user .item {
+font: normal 10pt "ＭＳ Ｐゴシック", sans-serif;
+}
+
+/* ログインエリア（ボタン関連） */
+/* ボタンエリア */
+#system .contents .head_bt {
+/**** （1行の場合）消去 */
+/**** （2行の場合）横に並べたいエリアに記述　display: inline;*/
+/**** （3行の場合）消去 */
+/*display: inline;*/
+}
+
+/* ログインボタン */
+#system .contents .head_bt .login {
+font: normal 10pt "ＭＳ Ｐゴシック", sans-serif;
+height: 20px;
+width: 60px;
+}
+
+/* 終了ボタン */
+#system .contents .head_bt .close {
+font: normal 10pt "ＭＳ Ｐゴシック", sans-serif;
+height: 20px;
+width: 60px;
+}
+
+/* ヘルプボタン */
+#system .contents .head_bt .help {
+font: normal 10pt "ＭＳ Ｐゴシック", sans-serif;
+height: 20px;
+width: 60px;
+}
+
+/* 横メニュー込みの領域 */
+#center {
+clear: both;
+}
+
+/*　　*/
+#title {
+background-image: url(../image/h2_m.gif);
+background-repeat: repeat-x;
+background-position: 0px 0px;
+height: 25px;
+padding-top: 0px;
+margin: 0px 0px 0px 0px;
+}
+
+#title h2 {
+background-image: url(../image/h2_l.gif);
+background-repeat: no-repeat;
+background-position: 0px 0px;
+padding: 5px 0px 0px 20px;
+font: normal 12pt "ＭＳ Ｐゴシック", sans-serif;
+font-weight: bold;
+height: 20px;
+color: #330066;
+}
+
+#message {
+background-repeat: repeat-x;
+background-position: 0px 0px;
+overflow-y: auto;
+height: 25px;
+padding-top: 3px;
+padding-left: 10px;
+margin: 0px 0px 0px 0px;
+background-color: #FFFFee;
+color: #CC0000;
+border-width: 0px 0px 1px 0px;
+border-color: #FF0099;
+}
+
+/* コンテンツエリアのみ（2） */
+#main {
+background-color: #FFFFFF;
+color: #2B2B2B;
+}
+
+/*　各種コンテンツ外枠（その1）　*/
+#main .contents_1 {
+width: 100%;
+/* text-align: center;
+padding-left: 5px; */
+}
+
+/*　各種コンテンツ外枠（その2）　*/
+#main .contents_2 {
+width: 100%;
+/* text-align: center;
+padding-left: 5px; */
+}
+
+.caption {
+margin: 5px 0px 10px 0px;
+}
+
+.caption h3 {
+padding: 1px 0px 1px 7px;
+font: normal 10pt "ＭＳ Ｐゴシック", sans-serif;
+border-left: #80BE23 solid 6px;
+font-weight: bold;
+color: #666666;
+text-align: left;
+}
+
+.caption .back_r {
+float: right;
+}
+
+
+/* ボタン（コンテンツ内） */
+.btn{
+font: normal 10pt "ＭＳ Ｐゴシック", sans-serif;
+height: 24px;
+margin-bottom: 2px;
+}
+
+/* ボタンエリア（コンテンツ下部） */
+#main .function_bottom {
+list-style: none;
+font: normal 10pt "ＭＳ ゴシック", sans-serif;
+margin-top: 7px;
+margin-bottom: 2px;
+margin-right: 1%;/**** テーブル幅-1%に合わせるため*/
+/* text-align: center; */
+}
+
+#main .function_bottom .button {
+margin: 1px;
+font: normal 10pt "ＭＳ ゴシック", sans-serif;
+height: 24px;
+}
+
+/* フッター　------------------------ */
+#footer {
+text-align: right;
+margin: 0px 0px 0px 0px;
+background: #FFFFFF url(../image/footer_l.gif) no-repeat left top;
+height: 28px;
+}
+
+#footer .text {
+font: normal 8pt "ＭＳ Ｐゴシック", sans-serif;
+background: url(../image/footer_r.gif) no-repeat right top;
+height: 28px;
+margin-left: 30px;
+color: #FFFFFF;
+padding: 7px 10px 0px 5px;
+}
+
+
+/* ラベル表示 */
+.label_center{
+text-align: center;
+}
+
+.label_left{
+text-align: left;
+}
+
+.label_right{
+text-align: right;
+}
+
+.text_right{
+text-align:right;
+padding-right: 1px;
+}
+.text_center{
+text-align:center;
+}
+.text_left{
+text-align:left;
+}
+.text_bold{
+font-weight:bold;
+}
+
+
+.txtR{
+text-align:right;
+padding-right: 1px;
+background: red;
+}
+.txtC{
+text-align:center;
+background: red;
+}
+.txtL{
+text-align:left;
+background: red;
+}
+.txtB{
+font-weight:bold;
+background: red;
+}
+
+.calendar {
+display: block;
+width: 16px;
+height: 16px;
+}
+
+/* カレンダーリンク  */
+.calendar a {
+background-image: url(../image/icon_calendar.gif);
+background-repeat: no-repeat;
+position: relative;
+top: 3px;
+display: block;
+width: 16px;
+height: 16px;
+text-decoration: none;
+}
+
+.calendar a:hover {
+background-position: 50% -28px;
+text-decoration: none;
+}
+
+/* -- タブコンポーネント -- */
+
+/* タブ全般 */
+.tab {
+border-collapse:collapse;
+width:100%;
+margin:5px auto 0px auto;
+}
+/*
+.tab td, .tab th{
+border:0px;
+}
+*/
+/* タブ耳部分共通 */
+.tab .index {
+width:120px; /* タブ幅 */
+height: 10px; /* タブ高 */
+vertical-align:bottom;
+}
+
+/* タブ(選択状態) */
+.tab .index .active {
+/*background:#FFFFFF url(../image/tab_active.gif) repeat-x 0px 0px;*/
+background:#FFFFFF url(../image/top-menu_link.gif) repeat-x 0px 0px;
+border-top:solid 1px #BBBBBB;
+border-left:solid 1px #BBBBBB;
+border-right:solid 1px #BBBBBB;
+text-align:center;
+font-weight:normal;
+color:#444444;
+padding:1px 0px 1px 0px;
+}
+/* タブ(選択状態) ★追加★*/
+.tab .index .active a {
+text-align:center;
+text-decoration:none;
+font-weight:normal;
+color:#FFFFFF;
+/*color:#000000;*/
+}
+
+/* タブ(非選択状態) */
+/*
+.tab .index a {
+display:block;
+background:#EEEEEE url(../image/tab_link.gif) no-repeat -500px 0px;
+border-top:solid 1px #BBBBBB;
+border-left:solid 1px #BBBBBB;
+border-right:solid 1px #BBBBBB;
+border-bottom:solid 1px #BBBBBB;
+text-align:center;
+text-decoration:none;
+font-weight:normal;
+color:#444444;
+padding:0px 0px 0px 0px;
+}
+*/
+/* タブリンク(マウスオーバー) */
+/*
+.tab .index a:hover {
+background:#FFFFFF url(../image/tab_link.gif) no-repeat 0px 0px;
+}
+*/
+/* タブ(非選択状態) ★修正★*/
+.tab .index .passive a {
+display:block;
+background:#EEEEEE url(../image/tab_link.gif) no-repeat -500px 0px;
+border-top:solid 1px #BBBBBB;
+border-left:solid 1px #BBBBBB;
+border-right:solid 1px #BBBBBB;
+border-bottom:solid 1px #BBBBBB;
+text-align:center;
+text-decoration:none;
+font-weight:normal;
+color:#444444;
+padding:0px 0px 0px 0px;
+overflow:hidden;
+}
+
+/* タブリンク(マウスオーバー)★修正★ */
+.tab .index .passive a:hover {
+background:#FFFFFF url(../image/tab_link.gif) no-repeat 0px 0px;
+}
+
+/* タブ左側余白 */
+.tab .left_space {
+border-bottom:solid 1px #BBBBBB;
+width:10px;
+}
+
+/* タブ右側余白 */
+.tab .right_space {
+border-bottom:solid 1px #BBBBBB;
+}
+
+/* -- タブグループ -- */
+.tab_group {
+border-top:none;
+border-left:solid 1px #BBBBBB;
+border-right:solid 1px #BBBBBB;
+border-bottom:solid 1px #BBBBBB;
+color:#444444;
+margin:0px auto 0px auto;
+padding:5px 5px 5px 5px;
+}
+
+/* -- タブに対応する各ページ ★必要に応じて追加する★-- */
+#page1 {
+display: block;
+}
+#page2 {
+display: none;
+}
+#page3 {
+display: none;
+}
+#page4 {
+display: none;
+}
+#page5 {
+display: none;
+}
+
+/* -- 音声読み上げソフト対応  -- */
+.to_content {
+position:absolute;
+width:0px;
+height:0px;
+overflow:hidden;
+}
+
+
+

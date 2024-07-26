@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc.xsd
+http://www.springframework.org/schema/jdbc
+http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
+
+
+	<!-- データソースの設定 -->
+	<!--
+	<jdbc:embedded-database id="dataSourceWeb">
+		<jdbc:script location="META-INF/USER_INFO_TBL.ddl" encoding="UTF-8" />
+		<jdbc:script location="META-INF/ALL_TYPE_TBL.ddl" encoding="UTF-8" />
+		<jdbc:script location="META-INF/BATCH_REQUEST_TBL.ddl" encoding="UTF-8" />
+		<jdbc:script location="META-INF/BATCH_MANAGEMENT_TBL.ddl" encoding="UTF-8" />
+		<jdbc:script location="META-INF/IMAGE_DATA_TBL.ddl" encoding="UTF-8" />
+		<jdbc:script location="META-INF/ITEM_AUTH_MANAGEMENT_TBL.ddl" encoding="UTF-8" />
+		<jdbc:script location="META-INF/USER_INFO_insert.sql" encoding="UTF-8" />
+		<jdbc:script location="META-INF/ALL_TYPE_TBL_insert.sql" encoding="UTF-8" />
+		<jdbc:script location="META-INF/BATCH_REQUEST_TBL_insert.sql" encoding="UTF-8" />
+	</jdbc:embedded-database>
+	-->
+
+	<!-- Oracle Ver -->
+	<!-- <bean id="dataSourceWeb" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> -->
+	<!-- <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" /> -->
+	<!-- <property name="url" value="jdbc:oracle:thin:@164.69.68.155:1521:XEPDB1" /> -->
+	<!-- <property name="username" value="crust" /> -->
+	<!-- <property name="password" value="crust" /> -->
+	<!-- <property name="initialSize" value="5" /> -->
+	<!-- <property name="maxActive" value="20" /> -->
+	<!-- </bean> -->
+
+
+<bean id="dataSourceWeb" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+<property name="driverClassName"><value>oracle.jdbc.driver.OracleDriver</value></property>
+<property name="url"><value>jdbc:oracle:thin:@172.16.11.6:1521/xepdb1</value></property>
+<property name="username"><value>dbadmin</value></property>
+<property name="password"><value>dbadmin</value></property>
+<property name="defaultAutoCommit"><value>false</value></property>
+</bean>
+
+
+    <!-- JNDI接続 -->
+    <!--
+    <bean id="dataSourceWeb" class="org.springframework.jndi.JndiObjectFactoryBean">
+         <property name="jndiName"><value>java:/OracleDS</value></property >
+    </bean>
+    -->
+
+    <!-- JNDI接続 -->
+<!--
+    <bean id="dataSourceWeb" class="org.springframework.jndi.JndiObjectFactoryBean">
+         <property name="jndiName"><value>java:/OracleDS</value></property >
+    </bean>
+-->
+
+	<!-- トランザクションの設定 -->
+	<bean id="transactionManager" class=" org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSourceWeb" />
+	</bean>
+	<bean id="txProxyTemplate" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+		abstract="true">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="insert*">PROPAGATION_REQUIRED</prop>
+				<prop key="regist*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="set*">PROPAGATION_REQUIRED</prop>
+				<prop key="delete*">PROPAGATION_REQUIRED</prop>
+				<prop key="checkDb">PROPAGATION_REQUIRED,ISOLATION_READ_UNCOMMITTED</prop>
+				<prop key="logon">PROPAGATION_REQUIRED</prop>
+				<prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- DAOインターセプタ定義 -->
+	<bean id="daoInterceptorHandler" class="jp.go.jfc.partnernet.pnfw.dao.intercept.handle.PNDAOInterceptorHandler"
+		scope="prototype">
+		<property name="interceptors">
+			<list>
+				<bean class="jp.go.jfc.partnernet.pnfw.dao.intercept.PNDAOStartEndLogInterceptor" scope="prototype" />
+				<bean class="jp.go.jfc.partnernet.common.dao.intercept.CommonColumnSetInterceptor" scope="prototype" />
+			</list>
+		</property>
+	</bean>
+	<!-- Serviceインターセプタ定義 -->
+	<bean id="serviceInterceptorHandler" class="jp.go.jfc.partnernet.pnfw.service.intercept.handle.PNServiceInterceptorHandler"
+		scope="prototype">
+		<property name="interceptors">
+			<list>
+				<bean class="jp.go.jfc.partnernet.pnfw.service.intercept.PNServiceStartEndLogInterceptor" scope="prototype" />
+<!--
+				<bean class="jp.go.jfc.partnernet.common.service.intercept.CommonServiceStopEvalInterceptor"
+					scope="singleton" />
+ -->
+			</list>
+		</property>
+	</bean>
+
+	<bean id="abstractRequestMappingHandlerAdapter" class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"
+		abstract="true">
+		<property name="sessionAttributeStore">
+			<bean class="jp.go.jfc.partnernet.pnfw.web.session.PNWindowIdPrefixSessionAttributeStore" />
+		</property>
+		<property name="webBindingInitializer">
+			<bean class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">
+				<property name="conversionService">
+					<bean class="org.springframework.format.support.FormattingConversionServiceFactoryBean" />
+				</property>
+			</bean>
+		</property>
+		<property name="messageConverters">
+			<list>
+				<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+			</list>
+		</property>
+	</bean>
+	<!-- アノテーション検索パッケージ -->
+	<context:component-scan base-package="jp.go.jfc.partnernet.pnfw.common" />
+	<mvc:annotation-driven />
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+
+
+	<!-- Controllerインターセプター定義 -->
+	<mvc:interceptors>
+		<bean class="jp.go.jfc.partnernet.pnfw.web.intercept.PNRequestTimeSetInterceptor" />
+		<bean class="jp.go.jfc.partnernet.web.common.intercept.LogSettingInterceptor" />
+		<bean class="jp.go.jfc.partnernet.pnfw.web.intercept.PNOperationLogInterceptor" />
+		<bean class="jp.go.jfc.partnernet.web.common.intercept.LoginInfoHoldInterceptor" />
+		<bean class="jp.go.jfc.partnernet.pnfw.web.intercept.PNLoginCheckInterceptor" />
+		<bean class="jp.go.jfc.partnernet.pnfw.web.intercept.PNControllerMappingInterceptor" />
+		<bean class="jp.go.jfc.partnernet.pnfw.web.intercept.PNProcessSessionInterceptor" />
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/**/Download.form" />
+			<bean class="jp.go.jfc.partnernet.pnfw.web.intercept.PNProcessScreenIdHoldInterceptor" />
+		</mvc:interceptor>
+
+		<bean class="jp.go.jfc.partnernet.pnfw.web.intercept.PNTokenInterceptor" />
+	</mvc:interceptors>
+
+	<bean class="jp.go.jfc.partnernet.pnfw.web.control.intercept.handle.PNRequestMappingInterceptorHandler" scope="prototype">
+		<property name="interceptors">
+			<list>
+				<bean class="jp.go.jfc.partnernet.pnfw.web.control.intercept.PNInitWindowIdSaveInterceptor" />
+				<bean class="jp.go.jfc.partnernet.pnfw.web.control.intercept.PNProcessScreenIdSetInterceptor" />
+				<!--
+				<bean class="jp.go.jfc.partnernet.pnfw.web.control.intercept.PNSetUpItemAuthorityInterceptor" scope="singleton">
+					<property name="ItemAuthInfo" ref="itemAuthInfo" />
+				</bean>
+				 -->
+				<bean class="jp.go.jfc.partnernet.pnfw.web.control.intercept.PNBeanValidationInterceptor" />
+				<bean class="jp.go.jfc.partnernet.pnfw.web.control.intercept.PNDependentValidationInterceptor" />
+				<bean class="jp.go.jfc.partnernet.common.web.intercept.HeaderInfoInterceptor" />
+			</list>
+		</property>
+	</bean>
+	<bean class="jp.go.jfc.partnernet.pnfw.web.common.PNTokenProcessorImpl" scope="singleton" />
+	<bean id="windowIdGenerator" class="jp.go.jfc.partnernet.pnfw.web.session.PNWindowIdGeneratorImpl" scope="singleton" />
+
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basenames">
+			<value>classpath:MessageResource</value>
+		</property>
+		<property name="fallbackToSystemLocale" value="false" />
+	</bean>
+
+	<bean name="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+
+	<!-- View -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/jsp/" />
+		<property name="suffix" value=".jsp" />
+		<property name="order" value="2" />
+	</bean>
+
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- ファイルアップロードの最大サイズ（byte） -->
+		<!-- <property name="maxUploadSize" value="100000" /> -->
+	</bean>
+
+
+	<!-- Declare the Resolver -->
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+		<property name="defaultLocale" value="ja" />
+	</bean>
+
+	<mvc:resources mapping="/css/**" location="/css/" cache-period="31556926" />
+	<mvc:resources mapping="/image/**" location="/image/" cache-period="31556926" />
+
+</beans>

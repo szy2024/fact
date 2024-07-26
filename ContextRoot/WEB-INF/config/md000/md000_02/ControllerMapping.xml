@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controllerMappings viewName="md000_02"	xmlns="http://www.fujitsu.com/crust/ControllerMapping/1.0">
+
+	<controller class="jp.go.jfc.partnernet.md000.md000_02.web.Md000_02InitController"
+				validate="false">
+	</controller>
+	<controller class="jp.go.jfc.partnernet.md000.md000_02.web.Md000_02BackController"
+				validate="false">
+            <forward id="successMd000_01Return" path="../md000_01/Md000_01Return.form"/>
+	</controller>
+	<controller class="jp.go.jfc.partnernet.md000.md000_02.web.Md000_02SendReportController"
+				validate="false">
+            <forward id="successMd001_01Init" path="../../md001/md001_01/Md001_01Init.form"/>
+            <forward id="successMd001_02Init" path="../../md001/md001_02/Md001_02Init.form"/>
+            <forward id="successMd002_01Init" path="../../md002/md002_01/Md002_01Init.form"/>
+            <forward id="successMd002_02Init" path="../../md002/md002_02/Md002_02Init.form"/>
+            <forward id="successMd003_01Init" path="../../md003/md003_01/Md003_01Init.form"/>
+            <forward id="successMd003_02Init" path="../../md003/md003_02/Md003_02Init.form"/>
+            <forward id="successMd004_01Init" path="../../md004/md004_01/Md004_01Init.form"/>
+            <forward id="successMd004_02Init" path="../../md004/md004_02/Md004_02Init.form"/>
+            <forward id="successMd005_01Init" path="../../md005/md005_01/Md005_01Init.form"/>
+            <forward id="successMd005_02Init" path="../../md005/md005_02/Md005_02Init.form"/>
+            <forward id="successMd006_01Init" path="../../md006/md006_01/Md006_01Init.form"/>
+            <forward id="successMd006_02Init" path="../../md006/md006_02/Md006_02Init.form"/>
+            <forward id="successMd008_01Init" path="../../md008/md008_01/Md008_01Init.form"/>
+            <forward id="successMd008_02Init" path="../../md008/md008_02/Md008_02Init.form"/>
+            <forward id="successMd009_01Init" path="../../md009/md009_01/Md009_01Init.form"/>
+            <forward id="successMd009_02Init" path="../../md009/md009_02/Md009_02Init.form"/>
+            <forward id="successMd010_01Init" path="../../md010/md010_01/Md010_01Init.form"/>
+            <forward id="successMd011_01Init" path="../../md011/md011_01/Md011_01Init.form"/>
+            <forward id="successMd012_01Init" path="../../md012/md012_01/Md012_01Init.form"/>
+            <forward id="successMd013_01Init" path="../../md013/md013_01/Md013_01Init.form"/>
+	</controller>
+	<controller class="jp.go.jfc.partnernet.md000.md000_02.web.Md000_02PageingController"
+				validate="false">
+				<forward id="successMd000_02Init" path="Md000_02Init.form"/>
+	</controller>
+	<controller class="jp.go.jfc.partnernet.md000.md000_02.web.Md000_02ReturnController"
+				validate="false">
+	</controller>
+
+</controllerMappings>

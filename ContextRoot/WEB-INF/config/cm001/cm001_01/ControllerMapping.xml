@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controllerMappings viewName="cm001_01"	xmlns="http://www.fujitsu.com/crust/ControllerMapping/1.0">
+
+	<controller class="jp.go.jfc.partnernet.cm001.cm001_01.web.Cm001_01InitController" validate="false">
+	</controller>
+	<controller class="jp.go.jfc.partnernet.cm001.cm001_01.web.Cm001_01LogonController" validate="true">
+            <redirect id="successCm001_01Logon1" path="../../ut001/ut001_01/Ut001_01Init.form"/>
+            <redirect id="successCm001_01Logon2" path="../../cm001/cm001_02/Cm001_02Init.form"/>
+	</controller>
+	<controller class="jp.go.jfc.partnernet.cm001.cm001_01.web.Cm001_01ChangePasswordController" validate="true">
+            <redirect id="successCm001_01ChangePassword" path="../cm001_02/Cm001_02Init.form"/>
+	</controller>
+
+</controllerMappings>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>SpringTest</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- エンコーディングフィルターの設定 -->
+	<filter>
+		<filter-name>characterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>characterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- spring用のリスナー -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/ApplicationContext*.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>defaultHtmlEscape</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+	<!-- ControllerMapping.xmlをロードするリスナー -->
+	<listener>
+		<listener-class>jp.go.jfc.partnernet.pnfw.web.control.mapping.PNControllerMappingListerner</listener-class>
+	</listener>
+	<context-param>
+		<param-name>mappingConfigLocation</param-name>
+		<param-value></param-value>
+	</context-param>
+
+	<!-- 画面毎のサーブレット -->
+	<servlet>
+		<servlet-name>ut003_03</servlet-name>
+		<servlet-class>jp.go.jfc.partnernet.pnfw.web.servlet.PNDispacherServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ut003_03</servlet-name>
+		<url-pattern>/ut003/ut003_03/*</url-pattern>
+	</servlet-mapping>
+
+</web-app>

@@ -1,0 +1,157 @@
+@charset "UTF-8";
+/* Style Sheet for Partner Net */
+/* last modified : 2004/07/14  */
+
+/* Environment
+
+   OS:Windows 2000 Server, Windows XP Professional
+   Browser:Internet Explorer 6.0 SP1
+	 Display: 1024x768, 16bpp
+
+ */
+/* Layout
+
+ +-----+----------------------------+
+ |menu |header                      |
+ |     +----------------------------+
+ |     |navigator                   |
+ |     +----------------------------+
+ |     |main                        |
+ |     |                            |
+ |     +----------------------------+
+ |     |footer                      |
+ +-----+----------------------------+
+
+*/
+
+/* Format
+
+ (class name) {
+				 height, width
+				 display, float
+				 color, background-color
+				 margin
+				 padding
+				 font, text
+				 border
+ }
+
+ */
+
+/* global */
+body {
+				color:black;
+				background-color:white;
+				margin-top:0px;
+				margin-left:0px;
+				margin-right:0px;
+				padding:0px;
+}
+
+div.menu {
+				color:black;
+				background-color:ghostwhite;
+				margin-top:0px;
+				margin-left:0px;
+				border:solid 1px green;
+				overflow-y:hidden;
+}
+
+/* header section */
+div.header {
+				color:white;
+				background-color:green;
+				margin-top:0px;
+				margin-left:0px;
+				padding-top:5px;
+				padding-left:10px;
+				padding-bottom:5px;
+}
+
+/* タイトル */
+div.header div.title {
+				font-size:16px;
+}
+
+
+/* navigator section */
+div.navigator {
+				color:black;
+				background-color:#66cc66;
+				padding-top:3px;
+				padding-left:20px;
+				padding-bottom:3px;
+}
+
+
+/* main section */
+div.main {
+				/*height:600px;*/
+				width:950px;
+				color:Black;
+				background-color: White;
+				margin-top:15px;
+				margin-left:30px;
+				margin-right:30px;
+				margin-bottom:15px;
+				padding-top:20px;
+				padding-left:10px;
+				padding-right:20px;
+				font-size: 14px;
+}
+
+div.main .buttons
+{
+	padding: 7px 3px 7px 3px;
+}
+
+div.main .greeting
+{
+				 width:90%;
+				font-size:14px;
+				padding: 7px 0px 7px 0px;
+}
+
+div.main span#lblErr {
+				color:red;
+				font-weight:bold;
+}
+.cr13List {
+				text-align:center;
+				border-collapse:collapse;
+				border:solid 1px #000;
+				align:center;
+				width:100%
+}
+
+.cr13List th {
+				text-align:center;
+				background-color: #ccffcc;
+				border:solid 1px #000;
+}
+
+.cr13List td {
+				border:solid 1px #000;
+}
+
+
+.itemName {
+				text-align:center;
+}
+.item {
+				text-align:left;
+				padding: 0px 10px;
+}
+.lblDocName {
+				border:none;
+				background-color: #a9a9a9;
+				text-align:left;
+}
+.fileName td {
+				border:none;
+}
+
+#fileUpload {
+				background-color:silver;
+				margin:5px;
+}

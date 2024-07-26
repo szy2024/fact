@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controllerMappings viewName="se013_01"	xmlns="http://www.fujitsu.com/crust/ControllerMapping/1.0">
+
+	<controller class="jp.go.jfc.partnernet.se013.se013_01.web.Se013_01InitController"
+				validate="false">
+	</controller>
+	<controller class="jp.go.jfc.partnernet.se013.se013_01.web.Se013_01SearchController"
+				validate="true">
+	</controller>
+	<controller class="jp.go.jfc.partnernet.se013.se013_01.web.Se013_01DownloadController"
+				validate="false">
+	</controller>
+	<controller class="jp.go.jfc.partnernet.se013.se013_01.web.Se013_01PageingController"
+				validate="false">
+	</controller>
+
+</controllerMappings>

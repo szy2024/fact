@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <bean id="pnuserDAO" class="jp.go.jfc.partnernet.common.dao.PnUserDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="jikkoreportDAO" class="jp.go.jfc.partnernet.common.dao.JikkoreportDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="jikkoreporttempDAO" class="jp.go.jfc.partnernet.common.dao.JikkoreporttempDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="ukeirereportDAO" class="jp.go.jfc.partnernet.common.dao.UkeirereportDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="ukeirereporttempDAO" class="jp.go.jfc.partnernet.common.dao.UkeirereporttempDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="ganjureportDAO" class="jp.go.jfc.partnernet.common.dao.GanjureportDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="ganjureporttmpDAO" class="jp.go.jfc.partnernet.common.dao.GanjureporttmpDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kurishoreportDAO" class="jp.go.jfc.partnernet.common.dao.KurishoreportDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kurishotempDAO" class="jp.go.jfc.partnernet.common.dao.KurishotempDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kariukereportDAO" class="jp.go.jfc.partnernet.common.dao.KariukereportDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="tatekaereportDAO" class="jp.go.jfc.partnernet.common.dao.TatekaereportDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="tatekaereporttmpDAO" class="jp.go.jfc.partnernet.common.dao.TatekaereporttmpDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="daibensaireportDAO" class="jp.go.jfc.partnernet.common.dao.DaibensaireportDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="reporthistoryDAO" class="jp.go.jfc.partnernet.common.dao.ReporthistoryDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="reportmasterDAO" class="jp.go.jfc.partnernet.common.dao.ReportmasterDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="newsDAO" class="jp.go.jfc.partnernet.common.dao.NewsDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="aringiDAO" class="jp.go.jfc.partnernet.common.dao.AringiDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="acustomerDAO" class="jp.go.jfc.partnernet.common.dao.AcustomerDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="reportnameDAO" class="jp.go.jfc.partnernet.common.dao.ReportnameDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="reportstatusDAO" class="jp.go.jfc.partnernet.common.dao.ReportstatusDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="reportmanageDAO" class="jp.go.jfc.partnernet.common.dao.ReportmanageDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="koukoshitenDAO" class="jp.go.jfc.partnernet.common.dao.KoukoshitenDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="tsuchijimuDAO" class="jp.go.jfc.partnernet.common.dao.TsuchijimuDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kinrijyohoDAO" class="jp.go.jfc.partnernet.common.dao.KinrijyohoDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="yoryomanualDAO" class="jp.go.jfc.partnernet.common.dao.YoryomanualDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="yoshikiDAO" class="jp.go.jfc.partnernet.common.dao.YoshikiDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="yakujoDAO" class="jp.go.jfc.partnernet.common.dao.YakujoDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="haraidashiDAO" class="jp.go.jfc.partnernet.common.dao.HaraidashiDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="seikyuDAO" class="jp.go.jfc.partnernet.common.dao.SeikyuDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="nyukinhistoryDAO" class="jp.go.jfc.partnernet.common.dao.NyukinhistoryDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="tenpoDAO" class="jp.go.jfc.partnernet.common.dao.TenpoDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kanjomeisaiDAO" class="jp.go.jfc.partnernet.common.dao.KanjomeisaiDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="addressDAO" class="jp.go.jfc.partnernet.common.dao.AddressDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="shinkokanriDAO" class="jp.go.jfc.partnernet.common.dao.ShinkokanriDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="shikinshitoDAO" class="jp.go.jfc.partnernet.common.dao.ShikinshitoDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kariireshutaiDAO" class="jp.go.jfc.partnernet.common.dao.KariireshutaiDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kinrihenkanDAO" class="jp.go.jfc.partnernet.common.dao.KinrihenkanDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kinriDAO" class="jp.go.jfc.partnernet.common.dao.KinriDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="tokuriDAO" class="jp.go.jfc.partnernet.common.dao.TokuriDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kurishojiyuDAO" class="jp.go.jfc.partnernet.common.dao.KurishojiyuDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="shokanDAO" class="jp.go.jfc.partnernet.common.dao.ShokanDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kariukeippanreportDAO" class="jp.go.jfc.partnernet.common.dao.KariukeippanreportDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kariukeippanreporttmpDAO" class="jp.go.jfc.partnernet.common.dao.KariukeippanreporttmpDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kariukesonotareportDAO" class="jp.go.jfc.partnernet.common.dao.KariukesonotareportDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kariukesonotareporttmpDAO" class="jp.go.jfc.partnernet.common.dao.KariukesonotareporttmpDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="hieigyobiDAO" class="jp.go.jfc.partnernet.common.dao.HieigyobiDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kessanbiDAO" class="jp.go.jfc.partnernet.common.dao.KessanbiDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="pnroleDAO" class="jp.go.jfc.partnernet.common.dao.PnRoleDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="pnonlineDAO" class="jp.go.jfc.partnernet.common.dao.PnOnlineDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="pndateDAO" class="jp.go.jfc.partnernet.common.dao.PnDateDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+
+    <bean id="customerinfosearch1DAO" class="jp.go.jfc.partnernet.common.dao.Customerinfosearch1DAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="customerinfosearch2DAO" class="jp.go.jfc.partnernet.common.dao.Customerinfosearch2DAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="daibensaireportmodviewDAO" class="jp.go.jfc.partnernet.common.dao.DaibensaireportmodviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="daibensaireportviewDAO" class="jp.go.jfc.partnernet.common.dao.DaibensaireportviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="extractdaibensaireportviewDAO" class="jp.go.jfc.partnernet.common.dao.ExtractdaibensaireportviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="extractganjureportviewDAO" class="jp.go.jfc.partnernet.common.dao.ExtractganjureportviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="extractjikkoreportviewDAO" class="jp.go.jfc.partnernet.common.dao.ExtractjikkoreportviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="extractkariukeippanreportviewDAO" class="jp.go.jfc.partnernet.common.dao.ExtractkariukeippanreportviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="extractkariukesonotareportviewDAO" class="jp.go.jfc.partnernet.common.dao.ExtractkariukesonotareportviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="extractkurishoreportviewDAO" class="jp.go.jfc.partnernet.common.dao.ExtractkurishoreportviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="extractkurishoteikireportviewDAO" class="jp.go.jfc.partnernet.common.dao.ExtractkurishoteikireportviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="extractrerekiviewDAO" class="jp.go.jfc.partnernet.common.dao.ExtractrerekiviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="extracttatekaereportviewDAO" class="jp.go.jfc.partnernet.common.dao.ExtracttatekaereportviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="extractukeirereportviewDAO" class="jp.go.jfc.partnernet.common.dao.ExtractukeirereportviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="ganjumihoukokuviewDAO" class="jp.go.jfc.partnernet.common.dao.GanjumihoukokuviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="ganjureportmodviewDAO" class="jp.go.jfc.partnernet.common.dao.GanjureportmodviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="ganjureportviewDAO" class="jp.go.jfc.partnernet.common.dao.GanjureportviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="haraikomiannaiDAO" class="jp.go.jfc.partnernet.common.dao.HaraikomiannaiDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="jikkozumiDAO" class="jp.go.jfc.partnernet.common.dao.JikkozumiDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="jikkozumi2DAO" class="jp.go.jfc.partnernet.common.dao.Jikkozumi2DAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kaishuyoteiankenichiranviewDAO" class="jp.go.jfc.partnernet.common.dao.KaishuyoteiankenichiranviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kariukeippanreportmodviewDAO" class="jp.go.jfc.partnernet.common.dao.KariukeippanreportmodviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kariukeippanreportviewDAO" class="jp.go.jfc.partnernet.common.dao.KariukeippanreportviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kariukesonotareportmodviewDAO" class="jp.go.jfc.partnernet.common.dao.KariukesonotareportmodviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kariukesonotareportviewDAO" class="jp.go.jfc.partnernet.common.dao.KariukesonotareportviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kashitsukejikkomodviewDAO" class="jp.go.jfc.partnernet.common.dao.KashitsukejikkomodviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kashitukejikkoviewDAO" class="jp.go.jfc.partnernet.common.dao.KashitukejikkoviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kojorisokukeisansimulationviewDAO" class="jp.go.jfc.partnernet.common.dao.KojorisokukeisansimulationviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kurishomodviewDAO" class="jp.go.jfc.partnernet.common.dao.KurishoModviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kurishoviewDAO" class="jp.go.jfc.partnernet.common.dao.KurishoViewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="miryoutotalviewDAO" class="jp.go.jfc.partnernet.common.dao.MiryoutotalviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="organizationminviewDAO" class="jp.go.jfc.partnernet.common.dao.OrganizationminviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="organizationnameviewDAO" class="jp.go.jfc.partnernet.common.dao.OrganizationnameviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="reporthistorymodviewDAO" class="jp.go.jfc.partnernet.common.dao.ReporthistorymodviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="saikenichiran2DAO" class="jp.go.jfc.partnernet.common.dao.Saikenichiran2DAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="selectharaidashimaxviewDAO" class="jp.go.jfc.partnernet.common.dao.SelectharaidashimaxviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="selectrephistmaxdateDAO" class="jp.go.jfc.partnernet.common.dao.SelectrephistmaxdateDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="selectreporthistorymaxDAO" class="jp.go.jfc.partnernet.common.dao.SelectreporthistorymaxDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="shokannenjiviewDAO" class="jp.go.jfc.partnernet.common.dao.ShokannenjiviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="tatekaereportmodviewDAO" class="jp.go.jfc.partnernet.common.dao.TatekaereportmodviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="tatekaereportviewDAO" class="jp.go.jfc.partnernet.common.dao.TatekaereportviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="tenpofukaminviewDAO" class="jp.go.jfc.partnernet.common.dao.TenpofukaminviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="tenpominviewDAO" class="jp.go.jfc.partnernet.common.dao.TenpominviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="tenponameviewDAO" class="jp.go.jfc.partnernet.common.dao.TenponameviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="tenponameview2DAO" class="jp.go.jfc.partnernet.common.dao.Tenponameview2DAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="ukeireharaidashimdviewDAO" class="jp.go.jfc.partnernet.common.dao.UkeireharaidashimdviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="ukeireharaidashiviewDAO" class="jp.go.jfc.partnernet.common.dao.UkeireharaidashiviewDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+	<bean id="rishijoseiindexDAO" class="jp.go.jfc.partnernet.common.dao.RishijoseiindexDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+     <bean id="shikinkofugekkanreportDAO" class="jp.go.jfc.partnernet.common.dao.ShikinkofugekkanreportDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+	<bean id="shikinkofushukanreportDAO" class="jp.go.jfc.partnernet.common.dao.ShikinkofushukanreportDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+	<bean id="hokatsureportDAO" class="jp.go.jfc.partnernet.common.dao.HokatsureportDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="teitokenreportDAO" class="jp.go.jfc.partnernet.common.dao.TeitokenreportDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="tenpokanriDAO" class="jp.go.jfc.partnernet.common.dao.TenpokanriDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="kanjocoopdoctypeDAO" class="jp.go.jfc.partnernet.common.dao.KanjocoopdoctypeDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="gyomuitakuindexDAO" class="jp.go.jfc.partnernet.common.dao.GyomuitakuindexDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+
+
+	<bean id="pnCommonDBComponents" scope="singleton" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="jp.go.jfc.partnernet.common.PNCommonDBComponents" />
+		</property>
+	</bean>
+    <bean id="commonkinriDAO" class="jp.go.jfc.partnernet.common.dao.CommonKinriDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="commonmaxvalueDAO" class="jp.go.jfc.partnernet.common.dao.CommonMaxValueDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+
+
+	<bean id="pnKeisanKoujorisoku" scope="singleton" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="jp.go.jfc.partnernet.common.calculation.PNKeisanKoujorisoku" />
+		</property>
+	</bean>
+
+    <bean id="pncom02_HaraidashiDAO" class="jp.go.jfc.partnernet.common.dao.PNCOM02_HaraidashiDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="pncom02_ReportHistoryDAO" class="jp.go.jfc.partnernet.common.dao.PNCOM02_ReportHistoryDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="pncom02_YakujoDAO" class="jp.go.jfc.partnernet.common.dao.PNCOM02_YakujoDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="pncom09_HiEigyobiDAO" class="jp.go.jfc.partnernet.common.dao.PNCOM09_HiEigyobiDAOImpl" scope="prototype">
+        <property name="dataSource" ref="dataSourceWeb" />
+    </bean>
+    <bean id="onlineservice" scope="singleton" parent="txProxyTemplate">
+        <property name="target">
+            <bean class="jp.go.jfc.partnernet.pnfw.web.pnonlinecheck.service.PNOnlineServiceImpl" />
+        </property>
+    </bean>
+
+    <bean id="logoncheck" scope="singleton" parent="txProxyTemplate">
+        <property name="target">
+            <bean class="jp.go.jfc.partnernet.pnfw.web.common.utils.PNMultipleLogonCheckServiceImpl" />
+        </property>
+    </bean>
+
+</beans>

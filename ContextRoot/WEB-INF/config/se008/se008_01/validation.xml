@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC
+        "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.3.0//EN"
+        "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
+
+<form-validation>
+    <formset>
+        <form name="Se008_01SearchController">
+            <field property="searchStartYear" depends="required,maxlength">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="searchStartYear" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>3</var-value>
+                </var>
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="searchStartYear" />
+
+            </field>
+            <field property="searchStartMonth" depends="required,maxlength">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="searchStartMonth" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="searchStartMonth" />
+
+            </field>
+            <field property="searchStartDate" depends="required,maxlength">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="searchStartDate" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="searchStartDate" />
+
+            </field>
+            <field property="searchEndYear" depends="required,maxlength">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="searchEndYear" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>3</var-value>
+                </var>
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="searchEndYear" />
+
+            </field>
+            <field property="searchEndMonth" depends="required,maxlength">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="searchEndMonth" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="searchEndMonth" />
+
+            </field>
+            <field property="searchEndDate" depends="required,maxlength">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="searchEndDate" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="searchEndDate" />
+
+            </field>
+
+        </form>
+
+    </formset>
+</form-validation>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="PartnerNet">
+        <wb-resource deploy-path="/" source-path="/ContextRoot" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/resources"/>
+        <dependent-module archiveName="PNFW-batch.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/PNFW-batch/PNFW-batch">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="PNFW-common.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/PNFW-common/PNFW-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="PNFW-webService.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/PNFW-webService/PNFW-webService">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="PNFW-service.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/PNFW-service/PNFW-service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="PNFW-dataAccess.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/PNFW-dataAccess/PNFW-dataAccess">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="PNFW-web.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/PNFW-web/PNFW-web">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="PNFW-commonParts.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/PNFW-commonParts/PNFW-commonParts">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="crust-common-3.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CrustFramework-ReleaseModule/crust-common-3.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="crust-dataaccess-3.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CrustFramework-ReleaseModule/crust-dataaccess-3.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="crust-commonparts-3.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CrustFramework-ReleaseModule/crust-commonparts-3.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="crust-web-3.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CrustFramework-ReleaseModule/crust-web-3.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="crust-webservice-3.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CrustFramework-ReleaseModule/crust-webservice-3.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="crust-service-3.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CrustFramework-ReleaseModule/crust-service-3.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="crust-batch-3.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CrustFramework-ReleaseModule/crust-batch-3.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/PartnerNet/build/classes"/>
+        <property name="context-root" value="PartnerNet"/>
+    </wb-module>
+</project-modules>

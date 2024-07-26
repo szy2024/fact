@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpCalendarInfo>
+    <list>
+        <info startDay="18680908" endDay="19120729" eraName="M" jpEraName="明治"/>
+        <info startDay="19120730" endDay="19261224" eraName="T" jpEraName="大正"/>
+<!-- [UPD] Ver 1.1.0 - START -->
+<!--        <info startDay="19261225" endDay="19890107" eraName="S" jpEraName="昭和"/> -->
+<!--        <info startDay="19890108" endDay="99999999" eraName="H" jpEraName="平成"/> -->
+        <info startDay="19261225" endDay="19881231" eraName="S" jpEraName="昭和"/>
+        <info startDay="19890101" endDay="20190430" eraName="H" jpEraName="平成"/>
+        <info startDay="20190501" endDay="99999999" eraName="R" jpEraName="令和"/>
+<!-- [UPD] Ver 1.1.0 - END -->
+    </list>
+</jpCalendarInfo>

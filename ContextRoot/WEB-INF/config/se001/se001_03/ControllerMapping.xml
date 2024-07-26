@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controllerMappings viewName="se001_03"	xmlns="http://www.fujitsu.com/crust/ControllerMapping/1.0">
+
+	<controller class="jp.go.jfc.partnernet.se001.se001_03.web.Se001_03InitController"
+				validate="false">
+	</controller>
+	<controller class="jp.go.jfc.partnernet.se001.se001_03.web.Se001_03BackController"
+				validate="false">
+		<forward id="successSe001_02ReturnController" path="../se001_02/Se001_02Return.form"/>
+	</controller>
+
+</controllerMappings>

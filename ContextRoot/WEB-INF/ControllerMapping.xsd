@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.fujitsu.com/crust/ControllerMapping/1.0" xmlns="http://www.fujitsu.com/crust/ControllerMapping/1.0">
+	<xs:element name="controllerMappings">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="controller" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="forward" minOccurs="0" maxOccurs="unbounded" type="transitionType" />
+							<xs:element name="redirect" minOccurs="0" maxOccurs="unbounded" type="transitionType" />
+						</xs:sequence>
+						<xs:attribute name="class" type="xs:string" use="required" />
+						<xs:attribute name="validate" type="xs:boolean" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="viewName" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+
+	<!--遷移要素の属性定義 -->
+	<xs:complexType name="transitionType">
+		<xs:attributeGroup ref="tranDefAttrs" />
+	</xs:complexType>
+
+	<!-- 属性宣言 -->
+	<!-- 遷移定義要素用 属性 -->
+	<xs:attributeGroup name="tranDefAttrs">
+		<xs:attribute name="path" type="xs:string" use="required" />
+		<xs:attribute name="id" type="xs:string" use="required" />
+	</xs:attributeGroup>
+
+</xs:schema>

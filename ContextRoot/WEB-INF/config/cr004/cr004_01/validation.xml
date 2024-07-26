@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC
+        "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.3.0//EN"
+        "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
+
+<form-validation>
+    <formset>
+        <form name="Cr004_01CreateController">
+            <field property="txtID_Code_Tenpo" depends="required,mask,fulllength">
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="txtID_Code_Tenpo" />
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_Code_Tenpo" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="fulllength" key="errors.fulllength"/>
+                <arg position="0" name="fulllength" key="txtID_Code_Tenpo" />
+                <arg position="1" name="fulllength" key="${var:fulllength}桁" resource="false" />
+                <var>
+                    <var-name>fulllength</var-name>
+                    <var-value>3</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_Year" depends="required,mask,fulllength">
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="txtID_Year" />
+                <msg name="mask" key="errors.alpha_numeric"/>
+                <arg position="0" name="mask" key="txtID_Year" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${ALPHA_NUMERIC}</var-value>
+                </var>
+                 <msg name="fulllength" key="errors.fulllength"/>
+                <arg position="0" name="fulllength" key="txtID_Year" />
+                <arg position="1" name="fulllength" key="${var:fulllength}桁" resource="false" />
+                <var>
+                    <var-name>fulllength</var-name>
+                    <var-value>3</var-value>
+                </var>
+            </field>
+            <field property="txtID_Kubun_HoshikiShikin" depends="required,mask,fulllength">
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="txtID_Kubun_HoshikiShikin" />
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_Kubun_HoshikiShikin" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="fulllength" key="errors.fulllength"/>
+                <arg position="0" name="fulllength" key="txtID_Kubun_HoshikiShikin" />
+                <arg position="1" name="fulllength" key="${var:fulllength}桁" resource="false" />
+                <var>
+                    <var-name>fulllength</var-name>
+                    <var-value>2</var-value>
+                </var>
+            </field>
+            <field property="txtID_ID_Ringi" depends="required,maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_ID_Ringi" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>5</var-value>
+                </var>
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="txtID_ID_Ringi" />
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_ID_Ringi" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_ID_RingiBranch" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_ID_RingiBranch" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>3</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_ID_RingiBranch" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_Name_Customer" depends="maxlength">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_Name_Customer" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>20</var-value>
+                </var>
+
+            </field>
+
+        </form>
+        <form name="Cr004_01SearchController">
+            <field property="txtID_Name_Customer" depends="required,maxlength,fullCharacter">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_Name_Customer" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>20</var-value>
+                </var>
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="txtID_Name_Customer" />
+                <msg name="fullCharacter" key="errors.full_character"/>
+                <arg position="0" name="fullCharacter" key="txtID_Name_Customer" />
+            </field>
+
+        </form>
+
+    </formset>
+</form-validation>

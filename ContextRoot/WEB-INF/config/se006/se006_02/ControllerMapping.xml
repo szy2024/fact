@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controllerMappings viewName="se006_02"	xmlns="http://www.fujitsu.com/crust/ControllerMapping/1.0">
+	<controller class="jp.go.jfc.partnernet.se006.se006_02.web.Se006_02InitController"
+				validate="false">
+		<forward id="confirmOk" path="../se006_02/Se006_02Init.form"/>
+	</controller>
+	<controller class="jp.go.jfc.partnernet.se006.se006_02.web.Se006_02SendReportController"
+				validate="false">
+		<forward id="successSe006_05Init" path="../se006_05/Se006_05Init.form"/>
+        <forward id="successSe006_06Init" path="../se006_06/Se006_06Init.form"/>
+        <forward id="successSe006_07Init" path="../se006_07/Se006_07Init.form"/>
+        <forward id="successSe006_08Init" path="../se006_08/Se006_08Init.form"/>
+        <forward id="successSe006_09Init" path="../se006_09/Se006_09Init.form"/>
+        <forward id="successSe006_10Init" path="../se006_10/Se006_10Init.form"/>
+        <forward id="successSe006_12Init" path="../se006_12/Se006_12Init.form"/>
+        <forward id="successSe006_13Init" path="../se006_13/Se006_13Init.form"/>
+        <forward id="successSe006_14Init" path="../se006_14/Se006_14Init.form"/>
+        <forward id="successSe006_15Init" path="../se006_15/Se006_15Init.form"/>
+        <forward id="successSe006_16Init" path="../se006_16/Se006_16Init.form"/>
+        <forward id="successSe006_17Init" path="../se006_17/Se006_17Init.form"/>
+	</controller>
+	<controller class="jp.go.jfc.partnernet.se006.se006_02.web.Se006_02SendMasterController"
+				validate="false">
+		<forward id="successSe006_03Init" path="../se006_03/Se006_03Init.form"/>
+	</controller>
+	<controller class="jp.go.jfc.partnernet.se006.se006_02.web.Se006_02SendErrorMessageController"
+				validate="false">
+				<forward id="successSe006_04Init" path="../se006_04/Se006_04Init.form"/>
+	</controller>
+	<controller class="jp.go.jfc.partnernet.se006.se006_02.web.Se006_02BackController"
+				validate="false">
+				<forward id="successSe006_01Return" path="../se006_01/Se006_01Return.form"/>
+	</controller>
+	<controller class="jp.go.jfc.partnernet.se006.se006_02.web.Se006_02ReturnController"
+				validate="false">
+	</controller>
+
+</controllerMappings>

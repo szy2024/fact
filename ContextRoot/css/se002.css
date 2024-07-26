@@ -1,0 +1,598 @@
+@charset "UTF-8";
+/* Style Sheet for Partner Net */
+/* last modified : 2004/07/14  */
+
+/* Environment
+
+   OS:Windows 2000 Server, Windows XP Professional
+   Browser:Internet Explorer 6.0 SP1
+	 Display: 1024x768, 16bpp
+
+ */
+/* Layout
+
+ +-----+----------------------------+
+ |menu |header                      |
+ |     +----------------------------+
+ |     |navigator                   |
+ |     +----------------------------+
+ |     |main                        |
+ |     |                            |
+ |     +----------------------------+
+ |     |footer                      |
+ +-----+----------------------------+
+
+*/
+
+/* Format
+
+ (class name) {
+				 height, width
+				 display, float
+				 color, background-color
+				 margin
+				 padding
+				 font, text
+				 border
+ }
+
+ */
+
+/* global */
+body {
+				color:black;
+				background-color:white;
+				margin-top:0px;
+				margin-left:0px;
+				margin-right:0px;
+				padding:0px;
+}
+
+div.menu {
+				color:black;
+				background-color:ghostwhite;
+				margin-top:0px;
+				margin-left:0px;
+				border:solid 1px green;
+				overflow-y:hidden;
+}
+
+/* header section */
+/* タイトル部 */
+div.header {
+				color:white;
+				background-color:green;
+				margin-top:0px;
+				margin-left:0px;
+				padding-top:5px;
+				padding-left:10px;
+				padding-bottom:5px;
+}
+
+div.header div.title {
+				font-size:16px;
+}
+
+/* navigator section */
+div.navigator {
+				color:black;
+				background-color:#66cc66;
+				padding-top:3px;
+				padding-left:20px;
+				padding-bottom:3px;
+}
+
+/* main section */
+div.main {
+			/* height:600px; */
+			/*	width:716px;
+				width:716px;	*/
+				color:black;
+				background-color:white;
+				margin-top:15px;
+				margin-left:30px;
+				margin-right:30px;
+				margin-bottom:15px;
+				padding-top:20px;
+				padding-left:10px;
+				padding-right:20px;
+				/* border:dotted 1px black; */
+}
+
+/*
+div.main div.kousei-aka {
+				margin-top:20px;
+				margin-bottom:20px;
+				font-size:14px;
+				border-bottom:
+				solid 2px red;
+}
+
+div.main div.shusei {
+				clear:both;
+				margin-top:20px;
+				margin-bottom:20px;
+				font-size:14px;
+				border-bottom:
+				solid 2px navy;
+}
+
+div.main div.kousei-aka span.aka {
+				color:red;
+}
+*/
+
+div.main div.report {
+				width:655px;
+				float:left;
+				padding: 5px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				border: groove 2px #ccffcc;
+}
+
+div.main div.report div.branch
+{
+				font-size:12px;
+				margin:5px 0 5px 0;
+				/* border-bottom:solid 1px gray; */
+}
+
+div.main div.report div.reportDate
+{
+				font-size:12px;
+				margin:3px 0 15px 0;
+				/* border-bottom:solid 1px gray; */
+}
+
+div.main div.report div.report_a_line {
+				clear:both;
+				margin-top:5px;
+}
+
+/* 更正（赤）、修正用のクラスを追加 */
+div.main div.report div.shusei {
+				/* clear:both; */
+				/* margin-top:20px; */
+				/* margin-bottom:20px; */
+				font-size:14px;
+				border-bottom:
+				solid 2px navy;
+}
+
+div.main div.report div.kousei-aka {
+				/* margin-top:20px; */
+				/* margin-bottom:20px; */
+				font-size:14px;
+				border-bottom:
+				solid 2px red;
+}
+
+div.main div.report div.kousei-aka span.aka {
+				color:red;
+}
+/* 更正（赤）、修正用のクラスを追加 End */
+
+div.main div.notice {
+				margin-top:20px;
+				margin-left:30px;
+				padding-left:10px;
+				padding-right:10px;
+				border:solid 1px green;
+}
+
+div.main div.notice div.global-title {
+				color:black;
+				background-color:#66cc66;
+				margin-top:10px;
+				margin-bottom:20px;
+				padding:10px;
+				font-size:16px;
+}
+
+div.main div.notice div.title-high {
+				color:red;
+				margin-bottom:10px;
+				border-bottom:dotted 2px green;
+				font-family: "ＭＳ　Ｐゴシック", "MS PGothic", sans-serif;
+				font-size:14px;
+				font-weight:bold;
+}
+
+div.main div.notice div.title {
+				color: green;
+				margin-bottom: 10px;
+				border-bottom: dotted 2px green;
+				font-family: "ＭＳ　Ｐゴシック", "MS PGothic", sans-serif;
+				font-size: 12px;
+				font-weight: bold;
+}
+
+div.main span#lblErr {
+				color:red;
+				margin-top:12px;
+				margin-bottom:12px;
+				font-weight:bold;
+}
+
+div.main span#lblErrMsg {
+				color:red;
+				margin-top:12px;
+				margin-bottom:12px;
+				font-weight:bold;
+}
+
+div.main div.printer {
+				text-align:right;
+				border-width:0px;
+				font-size:10px;
+}
+
+div.main div.finishedMessage {
+				margin-left:20px;
+				font-weight:bold;
+}
+
+div.main input#txtID_t {
+				background-color:#cccccc;
+}
+
+div.main div.status
+{
+				color:black;
+				margin:3px 0 3px 0;
+}
+
+div.main div.status span.errorMessage {
+				color:red;
+				font-weight:bold;
+}
+
+div.main div.errorReason {
+				color:#333333;
+				margin-top:15px;
+				margin-left:25px;
+}
+
+div.main div.greeting {
+				width:65%;
+				margin-top:8px;
+}
+
+div.main div.leftpain {
+				float:left;
+}
+
+div.main div.buttons {
+				margin-top:12px;
+				margin-bottom:12px;
+}
+
+div.main div.content {
+}
+
+div.main div.record div.recordHeader-title {
+				background-color:#99cc99;
+				padding:3px;
+}
+
+div.main div.record div.a-record {
+				float:left;
+				margin:2px;
+				padding:1px;
+				border:solid 1px gray;
+}
+
+div.main div.line {
+				clear:both;
+				font-size:11px;
+				margin-top:20px;
+}
+
+div.main div.record {
+
+}
+
+div.main TABLE
+{
+				/*
+				width:610px;
+				background-color:#ccffcc;
+				margin-bottom:20px;
+				font-size:10.5px;
+				*/
+}
+
+div.main TABLE.login {
+				width:300px;
+}
+
+/*
+div.main TD {
+				text-align:center;
+				background-color:white;
+				border:solid 1px gray;
+}
+*/
+div.main TABLE TD.login {
+				text-align:left;
+				border-width:0px;
+}
+
+div.main TABLE TD.isReport {
+				color:blue;
+				background-color:white;
+				text-align:left;
+}
+
+div.main TABLE TD.recordHeader-title {
+				background-color:#99cc99;
+				border-width:0px;
+}
+
+div.main TABLE TD.recordHeader {
+				text-align:left;
+				padding-left:5px;
+				font-family: "ＭＳ　Ｐゴシック", "MS PGothic", sans-serif, monospace;
+				font-size:12px;
+}
+
+div.main TABLE TD.spacer {
+				height:8px;
+				background-color:#cccc99;
+}
+
+div.main TABLE TD.item-title {
+				background-color:#99cc99;
+				padding:3px;
+				border-width:0px;
+}
+
+div.main TABLE.ctable {
+	width:500px;
+	background-color:#ccff99;
+	margin-top:10px;
+	font-size:12px;
+}
+
+div.main TABLE.ctable a:visited {
+	color:green;
+	font-size:14px;
+}
+
+div.main TABLE.ctable TD.name {
+	padding:2px;
+	text-align:center;
+}
+
+div.main TABLE.ctable TD.address {
+	padding:2px;
+	text-align:left;
+}
+
+div.main div.item
+{
+				background-color:#ccff99;
+				float:left;
+				margin:1px;
+				padding:5px;
+				font-size:12px;
+				/* border:solid 1px black; */
+}
+
+div.main div.item-input
+{
+				background-color:#ffff66;
+				float:left;
+				margin:1px;
+				padding:5px;
+				font-size:12px;
+				line-height:1.4em;
+				/* border:solid 1px black; */
+}
+
+div.main div.annotation {
+				width:294px;
+				background-color:aliceblue;
+				font-size:10px;
+				border:solid 1px red;
+}
+
+div.main div.annotation div.title {
+				border-bottom:solid 1px navy;
+}
+
+div.main div.content {
+				clear:both;
+				margin-top:5px;
+}
+
+/* footer section */
+div.footer {
+				color:white;
+				background-color:green;
+				margin-top:0px;
+				margin-left:0px;
+				margin-bottom:0px;
+				padding-top:3px;
+				padding-left:10px;
+				padding-right:3px;
+				padding-bottom:3px;
+				font-size:small;
+				text-align:right;
+}
+
+/* Table */
+div.main div.tbl TABLE
+{
+				width:50%;
+				text-align:left;
+				background-color:white;
+				border-width:0px;
+				border:0;
+}
+
+div.main div.tbl TD {
+				text-align:left;
+				background-color:white;
+				font-size:12px;
+				border-width:0px;
+				border:0;
+}
+
+
+/*----*/
+
+div.main div.report div.tbl2 TABLE {
+				width:100%;
+				/*text-align:left;*/
+				background-color:white;
+				font-size:10px;
+				border-width:1px;
+				border:1;
+				margin-top:5px;
+				margin-left:5px;
+				margin-bottom:1px;
+}
+
+div.main div.report div.tbl2 TABLE TD.recordHeader {
+				text-align:center;
+				background-color:#ccffcc;
+				padding-left:5px;
+				font-family: "ＭＳ　Ｐゴシック", "MS PGothic", sans-serif, monospace;
+				font-size:10px;
+}
+
+div.main div.report div.tbl3 TABLE {
+				width:90%;
+				/*text-align:left;*/
+				background-color:white;
+				font-size:10px;
+				border-width:1px;
+				border:1;
+				margin-top:1px;
+				margin-left:5px;
+				margin-bottom:1px;
+}
+
+div.main div.report div.tbl3 TABLE TD.recordHeader {
+				text-align:center;
+				background-color:#ccffcc;
+				padding-left:5px;
+				font-family: "ＭＳ　Ｐゴシック", "MS PGothic", sans-serif, monospace;
+				font-size:10px;
+}
+
+div.main div.report div.tbl4 TABLE {
+				width:35%;
+				/*text-align:left;*/
+				background-color:white;
+				font-size:10px;
+				border-width:1px;
+				border:1;
+				margin-top:1px;
+				margin-left:5px;
+				margin-bottom:1px;
+}
+
+div.main div.report div.tbl4 TABLE TD.recordHeader {
+				text-align:center;
+				background-color:#ccffcc;
+				padding-left:5px;
+				font-family: "ＭＳ　Ｐゴシック", "MS PGothic", sans-serif, monospace;
+				font-size:10px;
+}
+
+div.main div.report div.tbl5 TABLE {
+				width:60%;
+				/*text-align:left;*/
+				background-color:white;
+				font-size:12px;
+				border-width:1px;
+				border:1;
+				margin-top:15px;
+				margin-left:10px;
+				line-height:0.8em;
+}
+
+div.main div.report div.tbl5 TABLE TD.recordHeader {
+				text-align:center;
+				background-color:#ccffcc;
+				padding-left:5px;
+				font-family: "ＭＳ　Ｐゴシック", "MS PGothic", sans-serif, monospace;
+				font-size:12px;
+}
+
+
+div.main div.item2
+{
+				background-color:White;
+				float:left;
+				margin:1px;
+				padding:1px;
+				font-size:12px;
+				line-height:1.4em;
+				/*
+				border:solid 1px black;
+				*/
+}
+
+/* Table(共通) */
+
+div.main #tbl1 TABLE,
+div.main #tbl2 TABLE
+{
+	background-color: #FFFFFF;
+	border-collapse :separate;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	font-family:  "ＭＳ　Ｐゴシック", "MS PGothic", sans-serif, monospace;
+	font-size: 11px;
+}
+
+div.main #tbl1 .dtgHeader,
+#tbl2 .dtgHeader
+{
+	text-align:center;
+	background-color:#ccffcc;
+}
+
+div.main #tbl1 TD,
+#tbl2 TD
+{
+	/*
+	border-collapse: collapse;
+	border: solid 2px #FFFFFF;
+	*/
+	padding: 3px 3px 3px 3px;
+	width: auto;
+	font-family: "MS PGothic";
+}
+
+/* NoData Comment */
+
+div.main #se002_ID01_Results_UC_lblNoDataJikko,
+#se002_ID01_Results_UC_lblNoDataHaraidashi
+{
+	font-size: 1em;
+	font-weight: bold;
+	padding: 5px 5px 0px 20px;
+	color: #FF0000;
+}
+
+/*貸付実行額*/
+/*貸付実行額*/
+/*資金払出未了額*/
+div.main #tbl1 .mKettei,
+#tbl2 .mKettei,
+#tbl1 .mKashitsuke,
+#tbl2 .mKashitsuke,
+#tbl1 .mKashitsukeukeireZan,
+#tbl2 .mKashitsukeukeireZan
+{
+	text-align: right;
+	/*
+	width: 98px;
+	*/
+}

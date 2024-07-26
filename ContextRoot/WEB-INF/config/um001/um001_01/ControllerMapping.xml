@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controllerMappings viewName="um001_01"	xmlns="http://www.fujitsu.com/crust/ControllerMapping/1.0">
+
+	<controller class="jp.go.jfc.partnernet.um001.um001_01.web.Um001_01InitController" validate="false"/>
+
+	<controller class="jp.go.jfc.partnernet.um001.um001_01.web.Um001_01SendController" validate="true">
+            <forward id="successUm001_01Init" path="Um001_01Init.form"/>
+	</controller>
+
+	<controller class="jp.go.jfc.partnernet.um001.um001_01.web.Um001_01BackController" validate="false">
+            <forward id="successUm001_01Back" path="../../cm002/cm002_04/Cm002_04Init.form"/>
+	</controller>
+
+</controllerMappings>

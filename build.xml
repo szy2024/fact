@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<project name="PublicFW-web-sample" default="compile" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">-->
+<project name="PartnerNet" default="compile" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
+
+	<!-- Project properties -->
+	<property file="build.properties" />
+
+	<!-- tomcatホーム -->
+	<property name="tomcat.home" value="${tomcat.dir}" />
+
+	<!-- srcファイル作成ディレクトリ -->
+	<!--<property name="src.dir" value="./sample_src" />-->
+	<property name="src.dir" value="./src" />
+
+	<!-- resourcesファイル作成ディレクトリ -->
+	<property name="resources.dir" value="./resources" />
+
+	<!-- classファイル作成ディレクトリ -->
+	<property name="classes.dir" value="./ContextRoot/WEB-INF/classes" />
+
+	<!-- libディレクトリ -->
+	<property name="lib.dir" value="./ContextRoot/WEB-INF/lib" />
+
+	<!-- warファイルの設定 -->
+	<property name="war.home" value="./ContextRoot" />
+	<property name="web-app.name" value="${web-app.name}" />
+
+	<!-- javadocディレクトリ -->
+	<property name="javadoc.dir" value="./doc" />
+
+	<!-- lib classpath -->
+	<path id="lib.all.path">
+		<path refid="lib.runtime.path" />
+		<path refid="lib.servlet.path" />
+	</path>
+	<path id="lib.runtime.path">
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+	<path id="lib.servlet.path">
+		<fileset dir="${tomcat.home}/lib">
+			<include name="servlet-api.jar" />
+			<include name="jsp-api.jar" />
+			<include name="jasper-compiler.jar" />
+		</fileset>
+	</path>
+
+	<!-- clean -->
+	<target name="clean">
+		<delete dir="${classes.dir}" />
+		<mkdir dir="${classes.dir}" />
+	</target>
+
+	<!-- コンパイル -->
+	<target name="compile">
+		<javac srcdir="${src.dir}" destdir="${classes.dir}" encoding="UTF-8" includeantruntime="false" debug="true">
+			<classpath refid="lib.all.path" />
+		</javac>
+		<copy todir="${classes.dir}" verbose="true">
+			<fileset dir="${resources.dir}">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- distタスクによってwarファイルを作成 -->
+	<target name="dist">
+		<jar destfile="${web-app.name}.war" basedir="${war.home}" />
+	</target>
+
+	<!-- JavaDoc作成 -->
+	<target name="javadoc" description="JavaDocを生成します。">
+		<delete dir="${javadoc.dir}" />
+		<mkdir dir="${javadoc.dir}" />
+		<javadoc packagenames="*" maxmemory="256m" sourcepath="${src.dir}" destdir="${javadoc.dir}" author="Yes" version="Yes" use="Yes" private="No" encoding="UTF-8">
+		</javadoc>
+	</target>
+
+</project>

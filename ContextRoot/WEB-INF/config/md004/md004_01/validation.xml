@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC
+        "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.3.0//EN"
+        "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
+
+<form-validation>
+    <formset>
+        <form name="Md004_01SendController">
+            <field property="drpID_Date_Jtkshori_Gengo_Red" depends="maxlength">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Jtkshori_Gengo_Red" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>1</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_Date_Jtkshori_Nen_Red" depends="maxlength,mask,intRange">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="iD_Date_Jtkshori_Nen_Red" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_Date_Jtkshori_Nen_Red" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="intRange" key="errors.intRange"/>
+                <arg position="0" name="intRange" key="txtID_Date_Jtkshori_Nen_Red" />
+                <arg position="1" name="intRange" key="${var:min}" resource="false" />
+                <arg position="2" name="intRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>99</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Jtkshori_Tsuki_Red" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Jtkshori_Tsuki_Red" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="drpID_Date_Jtkshori_Tsuki_Red" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="drpDate_FirstHaraikomiAfterKuris_Gengo" depends="maxlength">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpDate_FirstHaraikomiAfterKuris_Gengo" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>1</var-value>
+                </var>
+
+            </field>
+            <field property="txtDate_FirstHaraikomiAfterKuris_Nen" depends="maxlength,mask,intRange">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtDate_FirstHaraikomiAfterKuris_Nen" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtDate_FirstHaraikomiAfterKuris_Nen" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="intRange" key="errors.intRange"/>
+                <arg position="0" name="intRange" key="txtDate_FirstHaraikomiAfterKuris_Nen" />
+                <arg position="1" name="intRange" key="${var:min}" resource="false" />
+                <arg position="2" name="intRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>99</var-value>
+                </var>
+
+            </field>
+            <field property="drpDate_FirstHaraikomiAfterKuris_Tsuki" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpDate_FirstHaraikomiAfterKuris_Tsuki" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="drpDate_FirstHaraikomiAfterKuris_Tsuki" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="drpDate_FirstHaraikomiAfterKuris_Bi" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpDate_FirstHaraikomiAfterKuris_Bi" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="drpDate_FirstHaraikomiAfterKuris_Bi" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Nyukin_Gengo" depends="maxlength">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Nyukin_Gengo" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>1</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_Date_Nyukin_Nen" depends="maxlength,mask,intRange">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_Date_Nyukin_Nen" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_Date_Nyukin_Nen" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="intRange" key="errors.intRange"/>
+                <arg position="0" name="intRange" key="txtID_Date_Nyukin_Nen" />
+                <arg position="1" name="intRange" key="${var:min}" resource="false" />
+                <arg position="2" name="intRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>99</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Nyukin_Tsuki" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Nyukin_Tsuki" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="drpID_Date_Nyukin_Tsuki" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Nyukin_Bi" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Nyukin_Bi" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="drpID_Date_Nyukin_Bi" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_M_KurishoRisoku" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_M_KurishoRisoku" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>11</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_M_KurishoRisoku" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_M_KurishoGankin" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_M_KurishoGankin" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>11</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_M_KurishoGankin" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_M_KojoRisoku" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_M_KojoRisoku" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>11</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_M_KojoRisoku" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_M_KurishoCommission" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_M_KurishoCommission" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>11</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_M_KurishoCommission" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_M_KariukeIppanJuto" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_M_KariukeIppanJuto" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>11</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_M_KariukeIppanJuto" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Sokin_Gengo" depends="maxlength">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Sokin_Gengo" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>1</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_Date_Sokin_Nen" depends="maxlength,mask,intRange">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_Date_Sokin_Nen" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_Date_Sokin_Nen" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="intRange" key="errors.intRange"/>
+                <arg position="0" name="intRange" key="txtID_Date_Sokin_Nen" />
+                <arg position="1" name="intRange" key="${var:min}" resource="false" />
+                <arg position="2" name="intRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>99</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Sokin_Tsuki" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Sokin_Tsuki" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="drpID_Date_Sokin_Tsuki" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Sokin_Bi" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Sokin_Bi" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="drpID_Date_Sokin_Bi" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_ID_Sokinbi" depends="maxlength,mask,intRange">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_ID_Sokinbi" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>3</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_ID_Sokinbi" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="intRange" key="errors.intRange"/>
+                <arg position="0" name="intRange" key="txtID_ID_Sokinbi" />
+                <arg position="1" name="intRange" key="${var:min}" resource="false" />
+                <arg position="2" name="intRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>999</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Haraikomi1_Gengo" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Haraikomi1_Gengo" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <msg name="mask" key="errors.alpha"/>
+                <arg position="0" name="mask" key="drpID_Date_Haraikomi1_Gengo" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${ALPHA}</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_Date_Haraikomi1_Nen" depends="maxlength,mask,intRange">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_Date_Haraikomi1_Nen" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_Date_Haraikomi1_Nen" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="intRange" key="errors.intRange"/>
+                <arg position="0" name="intRange" key="txtID_Date_Haraikomi1_Nen" />
+                <arg position="1" name="intRange" key="${var:min}" resource="false" />
+                <arg position="2" name="intRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>99</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Haraikomi1_Tsuki" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Haraikomi1_Tsuki" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="drpID_Date_Haraikomi1_Tsuki" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Haraikomi1_Bi" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Haraikomi1_Bi" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="drpID_Date_Haraikomi1_Bi" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Haraikomi2_Gengo" depends="maxlength">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Haraikomi2_Gengo" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>1</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_Date_Haraikomi2_Nen" depends="maxlength,mask,intRange">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_Date_Haraikomi2_Nen" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_Date_Haraikomi2_Nen" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="intRange" key="errors.intRange"/>
+                <arg position="0" name="intRange" key="txtID_Date_Haraikomi2_Nen" />
+                <arg position="1" name="intRange" key="${var:min}" resource="false" />
+                <arg position="2" name="intRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>99</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Haraikomi2_Tsuki" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Haraikomi2_Tsuki" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="drpID_Date_Haraikomi2_Tsuki" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Haraikomi2_Bi" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Haraikomi2_Bi" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="drpID_Date_Haraikomi2_Bi" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Haraikomi3_Gengo" depends="maxlength">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Haraikomi3_Gengo" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>1</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_Date_Haraikomi3_Nen" depends="maxlength,mask,intRange">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_Date_Haraikomi3_Nen" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_Date_Haraikomi3_Nen" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="intRange" key="errors.intRange"/>
+                <arg position="0" name="intRange" key="txtID_Date_Haraikomi3_Nen" />
+                <arg position="1" name="intRange" key="${var:min}" resource="false" />
+                <arg position="2" name="intRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>99</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Haraikomi3_Tsuki" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Haraikomi3_Tsuki" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="drpID_Date_Haraikomi3_Tsuki" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Haraikomi3_Bi" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Haraikomi3_Bi" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="drpID_Date_Haraikomi3_Bi" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Haraikomi4_Gengo" depends="maxlength">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Haraikomi4_Gengo" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>1</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_Date_Haraikomi4_Nen" depends="maxlength,mask,intRange">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_Date_Haraikomi4_Nen" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_Date_Haraikomi4_Nen" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="intRange" key="errors.intRange"/>
+                <arg position="0" name="intRange" key="txtID_Date_Haraikomi4_Nen" />
+                <arg position="1" name="intRange" key="${var:min}" resource="false" />
+                <arg position="2" name="intRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>99</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Haraikomi4_Tsuki" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Haraikomi4_Tsuki" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="drpID_Date_Haraikomi4_Tsuki" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Haraikomi4_Bi" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Haraikomi4_Bi" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="drpID_Date_Haraikomi4_Bi" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_M_HaraikomiGankin1" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_M_HaraikomiGankin1" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>11</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_M_HaraikomiGankin1" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_M_HaraikomiGankin2" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_M_HaraikomiGankin2" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>11</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_M_HaraikomiGankin2" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_M_HaraikomiGankin3" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_M_HaraikomiGankin3" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>11</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_M_HaraikomiGankin3" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_M_HaraikomiGankin4" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_M_HaraikomiGankin4" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>11</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_M_HaraikomiGankin4" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_M_GankinKintoAfterKurisho" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_M_GankinKintoAfterKurisho" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>11</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_M_GankinKintoAfterKurisho" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_M_GankinFukintoAfterKurisho" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_M_GankinFukintoAfterKurisho" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>11</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_M_GankinFukintoAfterKurisho" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Jtkshori_Gengo" depends="maxlength">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Jtkshori_Gengo" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>1</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_Date_Jtkshori_Nen" depends="maxlength,mask,intRange">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_Date_Jtkshori_Nen" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_Date_Jtkshori_Nen" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="intRange" key="errors.intRange"/>
+                <arg position="0" name="intRange" key="txtID_Date_Jtkshori_Nen" />
+                <arg position="1" name="intRange" key="${var:min}" resource="false" />
+                <arg position="2" name="intRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>99</var-value>
+                </var>
+
+            </field>
+            <field property="drpID_Date_Jtkshori_Tsuki" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Date_Jtkshori_Tsuki" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="drpID_Date_Jtkshori_Tsuki" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+
+        </form>
+
+    </formset>
+</form-validation>

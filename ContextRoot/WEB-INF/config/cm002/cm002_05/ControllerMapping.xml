@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controllerMappings viewName="cm002_05"	xmlns="http://www.fujitsu.com/crust/ControllerMapping/1.0">
+
+	<controller class="jp.go.jfc.partnernet.cm002.cm002_05.web.Cm002_05InitController"
+				validate="false">
+	</controller>
+
+</controllerMappings>

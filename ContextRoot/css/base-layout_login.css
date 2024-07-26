@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/***ベースレイアウト(ログイン)***/
+
+/* -----------------全般----------------- */
+* {
+	margin:0;
+	padding:0;
+}
+/* ボタンのフォント統一 */
+input, select, textarea {
+	font-family:"ＭＳ Ｐゴシック", Osaka, sans-serif;
+}
+
+/* リンク色(通常) */
+a:link {
+	color:#003399;
+}
+
+/* リンク色(訪問済み) */
+a:visited {
+	color:#660099;
+}
+
+/* リンク色(マウスオーバー) */
+a:hover {
+	color:#003399;
+}
+
+/* リンク色(アクティブ) */
+a:active {
+	color:#CC3300;
+}
+
+/* ----レイアウト---- */
+
+/* フレーム全体 */
+#base-layout {
+	width:100%;
+	border-collapse:collapse;
+	font:normal small "ＭＳ Ｐゴシック", Osaka, sans-serif; /* 全体の文字サイズ */
+	margin:0;
+	padding:0;
+}

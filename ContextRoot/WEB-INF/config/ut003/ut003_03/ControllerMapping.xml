@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controllerMappings viewName="ut003_03"	xmlns="http://www.fujitsu.com/crust/ControllerMapping/1.0">
+
+	<controller class="jp.go.jfc.partnernet.ut003.ut003_03.web.Ut003_03InitController"
+				validate="false">
+	</controller>
+	<controller class="jp.go.jfc.partnernet.ut003.ut003_03.web.Ut003_03DeleteController"
+				validate="true">
+            <forward id="successUt003_03Pageing" path="Ut003_03Pageing.form"/>
+	</controller>
+	<controller class="jp.go.jfc.partnernet.ut003.ut003_03.web.Ut003_03BackController"
+				validate="false">
+            <forward id="successUt003_01Back" path="../ut003_01/Ut003_01Init.form"/>
+	</controller>
+	<controller class="jp.go.jfc.partnernet.ut003.ut003_03.web.Ut003_03ReloadController"
+				validate="false">
+	</controller>
+	<controller class="jp.go.jfc.partnernet.ut003.ut003_03.web.Ut003_03DeleteallcheckController"
+				validate="false">
+	</controller>
+	<controller class="jp.go.jfc.partnernet.ut003.ut003_03.web.Ut003_03DeletealldeleteController"
+				validate="false">
+	</controller>
+	<controller class="jp.go.jfc.partnernet.ut003.ut003_03.web.Ut003_03NameController"
+				validate="false">
+	</controller>
+	<controller class="jp.go.jfc.partnernet.ut003.ut003_03.web.Ut003_03PageingController"
+				validate="false">
+	</controller>
+
+</controllerMappings>

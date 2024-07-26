@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC
+        "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.3.0//EN"
+        "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
+
+<form-validation>
+    <formset>
+        <form name="Ut002_01UpdateController">
+            <field property="drpID_ID_InfoType" depends="required">
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="drpID_ID_InfoType" />
+            </field>
+        </form>
+    </formset>
+</form-validation>

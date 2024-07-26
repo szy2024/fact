@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC
+        "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.3.0//EN"
+        "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
+
+<form-validation>
+    <formset>
+        <form name="Se009_01SendController">
+            <field property="drpID_Code_ShokanHonShiten" depends="required,maxlength">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="drpID_Code_ShokanHonShiten" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="drpID_Code_ShokanHonShiten" />
+
+            </field>
+            <field property="txtID_Code_Organization" depends="required,mask,fulllength">
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="txtID_Code_Organization" />
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_Code_Organization" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="fulllength" key="errors.fulllength"/>
+                <arg position="0" name="fulllength" key="txtID_Code_Organization" />
+                <arg position="1" name="fulllength" key="${var:fulllength}桁" resource="false" />
+                <var>
+                    <var-name>fulllength</var-name>
+                    <var-value>4</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_Code_Tenpo" depends="required,mask,fulllength">
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="txtID_Code_Tenpo" />
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_Code_Tenpo" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="fulllength" key="errors.fulllength"/>
+                <arg position="0" name="fulllength" key="txtID_Code_Tenpo" />
+                <arg position="1" name="fulllength" key="${var:fulllength}桁" resource="false" />
+                <var>
+                    <var-name>fulllength</var-name>
+                    <var-value>3</var-value>
+                </var>
+            </field>
+            <field property="txtID_Year" depends="required,mask,fulllength">
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="txtID_Year" />
+                <msg name="mask" key="errors.alpha_numeric"/>
+                <arg position="0" name="mask" key="txtID_Year" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${ALPHA_NUMERIC}</var-value>
+                </var>
+                <msg name="fulllength" key="errors.fulllength"/>
+                <arg position="0" name="fulllength" key="txtID_Year" />
+                <arg position="1" name="fulllength" key="${var:fulllength}桁" resource="false" />
+                <var>
+                    <var-name>fulllength</var-name>
+                    <var-value>3</var-value>
+                </var>
+            </field>
+            <field property="txtID_HoshikiShikin" depends="required,mask,fulllength">
+                 <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="txtID_HoshikiShikin" />
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_HoshikiShikin" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="fulllength" key="errors.fulllength"/>
+                <arg position="0" name="fulllength" key="txtID_HoshikiShikin" />
+                <arg position="1" name="fulllength" key="${var:fulllength}桁" resource="false" />
+                <var>
+                    <var-name>fulllength</var-name>
+                    <var-value>2</var-value>
+                </var>
+            </field>
+            <field property="txtID_ID_Ringi" depends="required,maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_ID_Ringi" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>5</var-value>
+                </var>
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="txtID_ID_Ringi" />
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_ID_Ringi" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_ID_RingiBranch" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_ID_RingiBranch" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>3</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_ID_RingiBranch" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="ID_SearchStartWareki" depends="required,maxlength">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="ID_SearchStartWareki" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="ID_SearchStartWareki" />
+
+            </field>
+            <field property="ID_SearchStartYear" depends="required,maxlength,minlength,mask,intRange">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="ID_SearchStartYear" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="ID_SearchStartYear" />
+                <msg name="minlength" key="errors.minlength"/>
+                <arg position="0" name="minlength" key="ID_SearchStartYear" />
+                <arg position="1" name="minlength" key="${var:minlength}" resource="false" />
+                <var>
+                    <var-name>minlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="ID_SearchStartYear" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+                <msg name="intRange" key="errors.intRange"/>
+                <arg position="0" name="intRange" key="ID_SearchStartYear" />
+                <arg position="1" name="intRange" key="${var:min}" resource="false" />
+                <arg position="2" name="intRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>99</var-value>
+                </var>
+
+            </field>
+            <field property="ID_SearchStartMonth" depends="required,maxlength,minlength,intRange">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="ID_SearchStartMonth" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="ID_SearchStartMonth" />
+                <msg name="minlength" key="errors.minlength"/>
+                <arg position="0" name="minlength" key="ID_SearchStartMonth" />
+                <arg position="1" name="minlength" key="${var:minlength}" resource="false" />
+                <var>
+                    <var-name>minlength</var-name>
+                    <var-value>1</var-value>
+                </var>
+
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="ID_SearchStartMonth" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+                <msg name="intRange" key="errors.intRange"/>
+                <arg position="0" name="intRange" key="ID_SearchStartMonth" />
+                <arg position="1" name="intRange" key="${var:min}" resource="false" />
+                <arg position="2" name="intRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>12</var-value>
+                </var>
+
+            </field>
+            <field property="ID_SearchStartDate" depends="required,maxlength,minlength,mask,intRange">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="ID_SearchStartDate" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="ID_SearchStartDate" />
+                <msg name="minlength" key="errors.minlength"/>
+                <arg position="0" name="minlength" key="ID_SearchStartDate" />
+                <arg position="1" name="minlength" key="${var:minlength}" resource="false" />
+                <var>
+                    <var-name>minlength</var-name>
+                    <var-value>1</var-value>
+                </var>
+
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="ID_SearchStartDate" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+                <msg name="intRange" key="errors.intRange"/>
+                <arg position="0" name="intRange" key="ID_SearchStartDate" />
+                <arg position="1" name="intRange" key="${var:min}" resource="false" />
+                <arg position="2" name="intRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>31</var-value>
+                </var>
+
+            </field>
+        <!--
+            <field property="txtID_M_Haraidashi" depends="required,maxlength,intRange">
+        -->
+            <field property="txtID_M_Haraidashi" depends="required,maxlength,mask,longRange">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_M_Haraidashi" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>11</var-value>
+                </var>
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="txtID_M_Haraidashi" />
+
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_M_Haraidashi" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+                <msg name="longRange" key="errors.longRange"/>
+                <arg position="0" name="longRange" key="txtID_M_Haraidashi" />
+                <arg position="1" name="longRange" key="${var:min}" resource="false" />
+                <arg position="2" name="longRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>99999999999</var-value>
+                </var>
+
+
+            </field>
+        <!--
+            <field property="txtID_M_Ganju" depends="required,maxlength,intRange">
+        -->
+            <field property="txtID_M_Ganju" depends="required,maxlength,mask,longRange">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_M_Ganju" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>11</var-value>
+                </var>
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="txtID_M_Ganju" />
+
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_M_Ganju" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+                <msg name="longRange" key="errors.longRange"/>
+                <arg position="0" name="longRange" key="txtID_M_Ganju" />
+                <arg position="1" name="longRange" key="${var:min}" resource="false" />
+                <arg position="2" name="longRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>99999999999</var-value>
+                </var>
+
+            </field>
+
+        </form>
+
+    </formset>
+</form-validation>

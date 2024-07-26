@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+	<!-- ログをコンソールに出力 -->
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<param name="threshold" value="debug" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{yyyy/MM/dd HH:mm:ss.SSS}] %-5p [%-8X{loginId}] (%t:%c{1}) - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- 運用ログをファイルに出力 -->
+	<appender name="OPERATION_LOG" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="D:\log\operation.log" />
+		<param name="threshold" value="trace" />
+		<param name="append" value="true" />
+		<param name="datePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{yyyy/MM/dd HH:mm:ss.SSS}][%-15X{ipAddress}] %-5p [%-8X{loginId}] (%t:%c{1}) - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- システムログをファイルに出力 -->
+	<appender name="SYSTEM_LOG" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="D:\log\system.log" />
+		<param name="threshold" value="debug" />
+		<param name="append" value="true" />
+		<param name="datePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{yyyy/MM/dd HH:mm:ss.SSS}][%-15X{ipAddress}] %-5p [%-8X{loginId}] (%t:%c{1}) - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- ログをファイルに出力 -->
+	<appender name="DBACCESS_LOG" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="D:\log\dbaccess.log" />
+		<param name="threshold" value="debug" />
+		<param name="append" value="true" />
+		<param name="datePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{yyyy/MM/dd HH:mm:ss.SSS}][%-15X{ipAddress}] %-5p [%-8X{loginId}] (%t:%c{1}) - %m%n" />
+		</layout>
+	</appender>
+
+
+	<!-- 以下フレームワークカテゴリ定義部分 -->
+	<!-- 運用ログカテゴリ -->
+	<category name="OPERATION_LOG">
+		<priority value="trace" />
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="OPERATION_LOG" />
+	</category>
+
+	<!-- DBアクセスログカテゴリ -->
+	<category name="DBACCESS_LOG">
+		<priority value="debug" />
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="DBACCESS_LOG" />
+	</category>
+
+	<!-- フレームワークログカテゴリ -->
+	<category name="org.springmodules">
+		<priority value="debug" />
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="SYSTEM_LOG" />
+	</category>
+
+	<!-- JSPエラーページログカテゴリ -->
+	<category name="incError.jsp">
+		<priority value="debug" />
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="SYSTEM_LOG" />
+	</category>
+	<!-- 以上フレームワークカテゴリ定義部分 -->
+
+	<!-- PartnerNet カテゴリ用 -->
+	<category name="jp.go.jfc.partnernet">
+		<priority value="debug" />
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="SYSTEM_LOG" />
+	</category>
+	<!-- 以上プロジェクト固有カテゴリ定義部分 -->
+
+</log4j:configuration>

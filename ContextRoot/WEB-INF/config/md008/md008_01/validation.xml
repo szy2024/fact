@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC
+        "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.3.0//EN"
+        "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
+
+<form-validation>
+    <formset>
+        <form name="Md008_01SendController">
+            <field property="txtID_Date_Jtkshori_Year_Input_Red" depends="mask,intRange">
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_Date_Jtkshori_Year_Input_Red" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="intRange" key="errors.intRange"/>
+                <arg position="0" name="intRange" key="txtID_Date_Jtkshori_Year_Input_Red" />
+                <arg position="1" name="intRange" key="${var:min}" resource="false" />
+                <arg position="2" name="intRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>99</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_Date_Nyukin_Year_Input" depends="mask,intRange">
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_Date_Nyukin_Year_Input" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="intRange" key="errors.intRange"/>
+                <arg position="0" name="intRange" key="txtID_Date_Nyukin_Year_Input" />
+                <arg position="1" name="intRange" key="${var:min}" resource="false" />
+                <arg position="2" name="intRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>99</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_M_KariukeIppanUkeire" depends="maxlength,mask">
+                <msg name="maxlength" key="errors.maxlength"/>
+                <arg position="0" name="maxlength" key="txtID_M_KariukeIppanUkeire" />
+                <arg position="1" name="maxlength" key="${var:maxlength}" resource="false" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>11</var-value>
+                </var>
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_M_KariukeIppanUkeire" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_Date_Sokin_Year_Input" depends="mask,intRange">
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_Date_Sokin_Year_Input" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="intRange" key="errors.intRange"/>
+                <arg position="0" name="intRange" key="txtID_Date_Sokin_Year_Input" />
+                <arg position="1" name="intRange" key="${var:min}" resource="false" />
+                <arg position="2" name="intRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>99</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_Code_Sokin" depends="mask,intRange">
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_Code_Sokin" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="intRange" key="errors.intRange"/>
+                <arg position="0" name="intRange" key="txtID_Code_Sokin" />
+                <arg position="1" name="intRange" key="${var:min}" resource="false" />
+                <arg position="2" name="intRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>999</var-value>
+                </var>
+
+            </field>
+            <field property="txtID_Date_Jtkshori_Year_Input" depends="mask,intRange">
+                <msg name="mask" key="errors.numeric"/>
+                <arg position="0" name="mask" key="txtID_Date_Jtkshori_Year_Input" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${NUMERIC}</var-value>
+                </var>
+                <msg name="intRange" key="errors.intRange"/>
+                <arg position="0" name="intRange" key="txtID_Date_Jtkshori_Year_Input" />
+                <arg position="1" name="intRange" key="${var:min}" resource="false" />
+                <arg position="2" name="intRange" key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>99</var-value>
+                </var>
+
+            </field>
+        </form>
+
+    </formset>
+</form-validation>

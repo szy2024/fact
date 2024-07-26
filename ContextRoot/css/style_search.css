@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/* テーブル（検索条件入力）------------------------ */
+.search {
+border-collapse: collapse;
+/*margin-top: 10px;*/
+margin-bottom: 10px;
+/* margin-left: auto;
+margin-right: auto; */
+width: 95%;/**** -1%しておかないとIEで段落ちします*/
+text-align: left;
+}
+
+/* 一括指定 */
+.search td {
+border: solid 1px #BBBBBB;
+font: normal 10pt "ＭＳ Ｐゴシック", sans-serif;
+/* padding: 5px; */
+padding-left: 10px;
+height: 30px;
+}
+
+/* 個別指定（通常項目） */
+.search .label {
+/*background: #E9EAF7 url(../image/search_label.gif) repeat-y left top;*/
+background: #E9EAF7;
+}
+
+.search .item {
+background-color: #F4F4F4;
+}
+
+/* 個別指定（ハイライト項目） */
+.search .label_accent {
+/*background: #F7E3DF url(../image/search_label_accent.gif) repeat-y left top;*/
+background: #F7E3DF;
+}
+
+.search .item_accent {
+background-color: #F4F4F4;
+}
+
+/* カレンダーアイコン */
+.search .item div {
+display: inline;
+float: left;
+}

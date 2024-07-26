@@ -1,0 +1,27 @@
+@charset "UTF-8";
+BODY
+{
+    BACKGROUND-COLOR: #3333cc;
+    BACKGROUND-IMAGE: none;
+    BACKGROUND-REPEAT: repeat;
+    COLOR: white;
+    FONT-FAMILY: MS UI Gothic;
+    FONT-SIZE: small;
+    MARGIN: 0px
+}
+A
+{
+    COLOR: white;
+    FONT-FAMILY: MS UI Gothic;
+    FONT-SIZE: small
+}
+TABLE
+{
+    COLOR: white;
+    FONT-SIZE: small;
+    MARGIN: 0px
+}
+TD
+{
+    COLOR: navy
+}

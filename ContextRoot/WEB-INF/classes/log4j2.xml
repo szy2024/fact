@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xml>
+
+<configuration status="OFF">
+
+	<Properties>
+        <Property name="stdPattern">[%d{yyyy/MM/dd HH:mm:ss.SSS}] %-5p [%-8X{loginId}] (%t:%c{1}) - %m%n</Property>
+        <Property name="opePattern">[%d{yyyy/MM/dd HH:mm:ss.SSS}][%-15X{clientIpAddress}] %-5p [%-8X{loginId}] (%t:%c{1}) - %m%n</Property>
+        <Property name="sysPattern">[%d{yyyy/MM/dd HH:mm:ss.SSS}][%-15X{clientIpAddress}] %-5p [%-8X{loginId}] (%t:%c{1}) - %m%n</Property>
+        <Property name="dbPattern">[%d{yyyy/MM/dd HH:mm:ss.SSS}][%-15X{clientIpAddress}] %-5p [%-8X{loginId}] (%t:%c{1}) - %m%n</Property>
+        <Property name="dirBase">/app/log_CICD</Property>
+    </Properties>
+
+	<Appenders>
+		<!-- ログをコンソールに出力 -->
+		<Console name="STDOUT" target="SYSTEM_OUT">
+			<PatternLayout pattern="${stdPattern}" />
+		</Console>
+
+		<!-- 運用ログをファイルに出力 -->
+		<RollingFile name="operation" fileName="${dirBase}/operation.log"
+		    filePattern="${dirBase}/operation.log.%d{yyyy-MM-dd}">
+		    <PatternLayout pattern="${opePattern}"/>
+	    	<Policies>
+	        	<TimeBasedTriggeringPolicy />
+	    	</Policies>
+		</RollingFile>
+
+		<!-- システムログをファイルに出力 -->
+		<RollingFile name="system" fileName="${dirBase}/system.log"
+	    	filePattern="${dirBase}/system.log.%d{yyyy-MM-dd}">
+	    	<PatternLayout pattern="${sysPattern}"/>
+	    	<Policies>
+	        	<TimeBasedTriggeringPolicy />
+	    	</Policies>
+		</RollingFile>
+
+		<!-- DBアクセスログをファイルに出力 -->
+		<RollingFile name="dbaccess" fileName="${dirBase}/dbaccess.log"
+	    	filePattern="${dirBase}/dbaccess.log.%d{yyyy-MM-dd}">
+	    	<PatternLayout pattern="${dbPattern}"/>
+	    	<Policies>
+	        	<TimeBasedTriggeringPolicy />
+	    	</Policies>
+		</RollingFile>
+
+		<!-- ログ非同期設定 -->
+
+	    <!-- 運用ログを非同期に設定 -->
+	    <Async name="OPERATION_LOG">
+	        <AppenderRef ref="operation" />
+	    </Async>
+
+	    <!-- システムログを非同期に設定 -->
+	    <Async name="SYSTEM_LOG">
+	        <AppenderRef ref="system" />
+	    </Async>
+
+	    <!-- DBアクセスログを非同期に設定 -->
+	    <Async name="DBACCESS_LOG">
+	        <AppenderRef ref="dbaccess" />
+	    </Async>
+	</Appenders>
+
+	<Loggers>
+		<!-- 以下フレームワークカテゴリ定義部分 -->
+		<!-- 運用ログカテゴリ -->
+		<Logger name="OPERATION_LOG" level="trace" additivity="false">
+			<AppenderRef ref="STDOUT" />
+			<AppenderRef ref="OPERATION_LOG" />
+		</Logger>
+
+		<!-- DBアクセスログカテゴリ -->
+		<Logger name="DBACCESS_LOG" level="debug" additivity="false">
+			<AppenderRef ref="STDOUT" />
+			<AppenderRef ref="DBACCESS_LOG" />
+		</Logger>
+
+		<!-- フレームワークログカテゴリ -->
+		<Logger name="com.fujitsu.crust" level="info" additivity="false">
+			<AppenderRef ref="STDOUT" />
+			<AppenderRef ref="SYSTEM_LOG" />
+		</Logger>
+
+		<!-- フレームワークログカテゴリ -->
+		<Logger name="org.springmodules" level="debug" additivity="false">
+			<AppenderRef ref="STDOUT" />
+			<AppenderRef ref="SYSTEM_LOG" />
+		</Logger>
+
+		<!-- JSPエラーページログカテゴリ -->
+		<Logger name="incError.jsp" level="debug" additivity="false">
+			<AppenderRef ref="STDOUT" />
+			<AppenderRef ref="SYSTEM_LOG" />
+		</Logger>
+		<!-- 以上フレームワークカテゴリ定義部分 -->
+
+
+		<!-- 以下プロジェクト固有カテゴリ定義部分 -->
+		<!-- サンプルアプリログカテゴリ -->
+		<Logger name="jp.go.jfc.partnernet" level="debug" additivity="false">
+			<AppenderRef ref="STDOUT" />
+			<AppenderRef ref="SYSTEM_LOG" />
+		</Logger>
+
+ 	<!-- <category name="org.springframework">
+ 		<priority value="debug" />
+ 		<appender-ref ref="STDOUT" />
+ 		<appender-ref ref="SYSTEM_LOG" />
+ 	</category> -->
+
+		<!-- 以上プロジェクト固有カテゴリ定義部分 -->
+	</Loggers>
+</configuration>

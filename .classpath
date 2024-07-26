@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.apache.ivyde.eclipse.cpcontainer.IVYDE_CONTAINER/?project=PartnerNet&amp;ivyXmlPath=ivy.xml&amp;confs=*">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/CrustFramework-ReleaseModule/crust-batch-3.1.0.jar"/>
+	<classpathentry kind="lib" path="/CrustFramework-ReleaseModule/crust-common-3.1.0.jar"/>
+	<classpathentry kind="lib" path="/CrustFramework-ReleaseModule/crust-commonparts-3.1.0.jar"/>
+	<classpathentry kind="lib" path="/CrustFramework-ReleaseModule/crust-dataaccess-3.1.0.jar"/>
+	<classpathentry kind="lib" path="/CrustFramework-ReleaseModule/crust-service-3.1.0.jar"/>
+	<classpathentry kind="lib" path="/CrustFramework-ReleaseModule/crust-web-3.1.0.jar"/>
+	<classpathentry kind="lib" path="/CrustFramework-ReleaseModule/crust-webservice-3.1.0.jar"/>
+	<classpathentry kind="output" path="ContextRoot/WEB-INF/classes"/>
+</classpath>
